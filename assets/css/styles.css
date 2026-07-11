@@ -483,8 +483,7 @@ h1 {
   animation: scrollLine 2.4s ease-in-out infinite;
 }
 
-#red
-{
+#red {
   color: #d8ff62;
 }
 .card {
@@ -948,6 +947,69 @@ footer {
 
 .card svg {
   height: 25px;
+}
+/* From Uiverse.io by vinodjangid07 */
+.Documents-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: fit-content;
+  height: 45px;
+  border: none;
+  padding: 0px 15px;
+  border-radius: 5px;
+  background-color: rgb(49, 49, 83);
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.folderContainer {
+  width: 40px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.fileBack {
+  z-index: 1;
+  width: 80%;
+  height: auto;
+}
+.filePage {
+  width: 50%;
+  height: auto;
+  position: absolute;
+  z-index: 2;
+  transition: all 0.3s ease-out;
+}
+.fileFront {
+  width: 85%;
+  height: auto;
+  position: absolute;
+  z-index: 3;
+  opacity: 0.95;
+  transform-origin: bottom;
+  transition: all 0.3s ease-out;
+}
+.text {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.Documents-btn:hover .filePage {
+  transform: translateY(-5px);
+}
+.Documents-btn:hover {
+  background-color: rgb(58, 58, 94);
+}
+.Documents-btn:active {
+  transform: scale(0.95);
+}
+.Documents-btn:hover .fileFront {
+  transform: rotateX(30deg);
 }
 
 .card {
@@ -1471,7 +1533,7 @@ a:active {
 }
 .projects-heading {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(230px, .8fr);
+  grid-template-columns: minmax(0, 1.2fr) minmax(230px, 0.8fr);
   gap: 36px;
   align-items: end;
   margin-bottom: 30px;
@@ -1481,7 +1543,7 @@ a:active {
   margin: 0;
   font-size: clamp(34px, 5vw, 52px);
   line-height: 1.02;
-  letter-spacing: -.045em;
+  letter-spacing: -0.045em;
 }
 .projects-heading p {
   max-width: 310px;
@@ -1498,7 +1560,7 @@ a:active {
 }
 .projects-track {
   display: flex;
-  transition: transform 1.15s cubic-bezier(.22, .72, .18, 1);
+  transition: transform 1.15s cubic-bezier(0.22, 0.72, 0.18, 1);
   will-change: transform;
 }
 .project-slide {
@@ -1522,9 +1584,11 @@ a:active {
   height: 2px;
   padding: 0;
   border: 0;
-  background: rgba(255, 253, 247, .2);
+  background: rgba(255, 253, 247, 0.2);
   cursor: pointer;
-  transition: width .45s ease, background .45s ease;
+  transition:
+    width 0.45s ease,
+    background 0.45s ease;
 }
 .carousel-dot.is-active {
   width: 42px;
@@ -1543,9 +1607,13 @@ a:active {
   border: 1px solid var(--line);
   border-radius: 50%;
   color: var(--text);
-  background: rgba(9, 11, 12, .72);
+  background: rgba(9, 11, 12, 0.72);
   cursor: pointer;
-  transition: color .3s ease, border-color .3s ease, background .3s ease, transform .3s ease;
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
 }
 .carousel-button:hover:not(:disabled) {
   color: #090b0c;
@@ -1554,12 +1622,12 @@ a:active {
   transform: translateY(-2px);
 }
 .carousel-button:disabled {
-  opacity: .3;
+  opacity: 0.3;
   cursor: default;
 }
 .projects-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.55fr) minmax(245px, .75fr);
+  grid-template-columns: minmax(0, 1.55fr) minmax(245px, 0.75fr);
   gap: 18px;
   align-items: stretch;
 }
@@ -1567,8 +1635,11 @@ a:active {
 .project-info-card {
   min-width: 0;
   border: 1px solid var(--line);
-  background: rgba(9, 11, 12, .76);
-  transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+  background: rgba(9, 11, 12, 0.76);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 .project-card {
   position: relative;
@@ -1577,8 +1648,8 @@ a:active {
 .project-card:hover,
 .project-info-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(216, 255, 98, .42);
-  box-shadow: 0 18px 42px rgba(0, 0, 0, .28);
+  border-color: rgba(216, 255, 98, 0.42);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
 }
 .project-card-image {
   position: relative;
@@ -1591,7 +1662,7 @@ a:active {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 72%, rgba(3, 5, 6, .78));
+  background: linear-gradient(180deg, transparent 72%, rgba(3, 5, 6, 0.78));
   pointer-events: none;
 }
 .project-card-image img {
@@ -1600,8 +1671,10 @@ a:active {
   height: 100%;
   object-fit: contain;
   image-rendering: auto;
-  filter: saturate(.98) contrast(1.02);
-  transition: transform .55s ease, filter .35s ease;
+  filter: saturate(0.98) contrast(1.02);
+  transition:
+    transform 0.55s ease,
+    filter 0.35s ease;
 }
 .project-card:hover .project-card-image img {
   transform: scale(1.018);
@@ -1616,11 +1689,13 @@ a:active {
   height: 30px;
   display: grid;
   place-items: center;
-  border: 1px solid rgba(216, 255, 98, .5);
+  border: 1px solid rgba(216, 255, 98, 0.5);
   border-radius: 50%;
   color: var(--accent);
-  background: rgba(5, 7, 8, .8);
-  font: 9px "DM Mono", monospace;
+  background: rgba(5, 7, 8, 0.8);
+  font:
+    9px "DM Mono",
+    monospace;
 }
 .project-image-caption {
   position: absolute;
@@ -1632,8 +1707,10 @@ a:active {
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-  opacity: .82;
-  transition: opacity .3s ease, transform .3s ease;
+  opacity: 0.82;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 .project-card:hover .project-image-caption {
   opacity: 1;
@@ -1643,15 +1720,17 @@ a:active {
 .project-card-type,
 .project-info-extra > span {
   color: var(--accent);
-  font: 9px "DM Mono", monospace;
-  letter-spacing: .06em;
+  font:
+    9px "DM Mono",
+    monospace;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 .project-image-caption strong {
   color: var(--text);
   font-size: 16px;
   font-weight: 600;
-  letter-spacing: -.02em;
+  letter-spacing: -0.02em;
 }
 .project-info-card {
   display: flex;
@@ -1659,14 +1738,18 @@ a:active {
   justify-content: space-between;
   gap: 20px;
   padding: 24px;
-  background: linear-gradient(145deg, rgba(216, 255, 98, .035), rgba(255, 255, 255, .012));
+  background: linear-gradient(
+    145deg,
+    rgba(216, 255, 98, 0.035),
+    rgba(255, 255, 255, 0.012)
+  );
 }
 .project-info-card h3 {
   margin: 12px 0 10px;
   font-size: clamp(24px, 3vw, 30px);
   font-weight: 700;
   line-height: 1.05;
-  letter-spacing: -.035em;
+  letter-spacing: -0.035em;
 }
 .project-card-description,
 .project-info-extra p {
@@ -1678,12 +1761,14 @@ a:active {
 .project-info-extra {
   padding: 14px 15px;
   border-left: 1px solid var(--accent);
-  background: rgba(216, 255, 98, .035);
-  transition: background .3s ease, transform .3s ease;
+  background: rgba(216, 255, 98, 0.035);
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
 }
 .project-info-card:hover .project-info-extra {
   transform: translateX(3px);
-  background: rgba(216, 255, 98, .06);
+  background: rgba(216, 255, 98, 0.06);
 }
 .project-info-extra p {
   margin-top: 7px;
@@ -1696,7 +1781,9 @@ a:active {
   padding-top: 14px;
   border-top: 1px solid var(--line);
   color: var(--text);
-  font: 9px "DM Mono", monospace;
+  font:
+    9px "DM Mono",
+    monospace;
   text-transform: uppercase;
 }
 .project-card-link .project-arrow {
@@ -1879,4 +1966,329 @@ h2,
   .contact-title {
     text-shadow: 0 2px 18px rgba(0, 0, 0, 0.38);
   }
+}
+
+/* Ajuste typewriter hero: nombre en una sola linea */
+.hero-name {
+  white-space: nowrap;
+  font-size: clamp(32px, 9.4vw, 64px);
+  line-height: 0.98;
+}
+
+@media (max-width: 420px) {
+  .hero-name {
+    font-size: clamp(30px, 9.2vw, 38px);
+  }
+}
+
+/* Evita saltos del bloque hero durante el typewriter */
+.role,
+.handle,
+.hero-name {
+  display: block;
+  overflow: visible;
+}
+
+.role {
+  min-height: 1.35em;
+  line-height: 1.35;
+}
+
+.hero-name {
+  min-height: 1em;
+}
+
+.handle {
+  min-height: 1.45em;
+  line-height: 1.45;
+}
+
+.intro {
+  margin-top: 0;
+}
+
+/* Fija el punto de escritura para que el typewriter no baile */
+.role,
+.handle,
+.hero-name {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.role {
+  width: 42ch;
+  max-width: calc(100vw - 36px);
+}
+
+.hero-name {
+  width: 12.8ch;
+  max-width: calc(100vw - 36px);
+}
+
+.handle {
+  width: 16ch;
+  max-width: calc(100vw - 36px);
+}
+
+.profile-socials,
+.intro,
+.tech-strip {
+  position: relative;
+}
+
+@media (max-width: 420px) {
+  .role {
+    font-size: 10px;
+    width: 43ch;
+  }
+
+  .handle {
+    width: 16ch;
+  }
+}
+
+/* Tamano de iconos sociales del hero */
+.profile-socials {
+  gap: 14px;
+}
+
+.profile-socials a {
+  width: 40px;
+  height: 40px;
+  font-size: 14px;
+}
+
+.profile-socials ion-icon {
+  font-size: 16px;
+}
+
+@media (max-width: 420px) {
+  .profile-socials a {
+    width: 38px;
+    height: 38px;
+  }
+
+  .profile-socials ion-icon {
+    font-size: 15px;
+  }
+}
+
+/* Tooltip moderno para iconos */
+.profile-socials a,
+.tech-item,
+.tech-logo {
+  position: relative;
+  isolation: isolate;
+}
+
+.profile-socials,
+.tech-strip,
+.tech-cloud,
+.tech-panel {
+  overflow: visible;
+}
+
+.profile-socials a::after,
+.tech-item::after,
+.tech-logo::after {
+  content: attr(title);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 12px);
+  z-index: 20;
+  min-width: max-content;
+  max-width: 180px;
+  padding: 8px 12px;
+  border: 1px solid rgba(216, 255, 98, 0.26);
+  border-radius: 999px;
+  background:
+    linear-gradient(135deg, rgba(20, 23, 18, 0.88), rgba(10, 12, 10, 0.72)),
+    rgba(255, 255, 255, 0.06);
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  font:
+    11px/1 "DM Mono",
+    monospace;
+  letter-spacing: 0.04em;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, 8px) scale(0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition:
+    opacity 0.22s ease,
+    transform 0.22s ease;
+}
+
+.profile-socials a::before,
+.tech-item::before,
+.tech-logo::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 7px);
+  z-index: 19;
+  width: 8px;
+  height: 8px;
+  border-right: 1px solid rgba(216, 255, 98, 0.24);
+  border-bottom: 1px solid rgba(216, 255, 98, 0.24);
+  background: rgba(18, 21, 16, 0.86);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 8px) rotate(45deg) scale(0.92);
+  transition:
+    opacity 0.22s ease,
+    transform 0.22s ease;
+}
+
+.profile-socials a:hover::after,
+.profile-socials a:focus-visible::after,
+.tech-item:hover::after,
+.tech-logo:hover::after,
+.tech-item:focus-visible::after,
+.tech-logo:focus-visible::after {
+  opacity: 1;
+  transform: translate(-50%, 0) scale(1);
+}
+
+.profile-socials a:hover::before,
+.profile-socials a:focus-visible::before,
+.tech-item:hover::before,
+.tech-logo:hover::before,
+.tech-item:focus-visible::before,
+.tech-logo:focus-visible::before {
+  opacity: 1;
+  transform: translate(-50%, 0) rotate(45deg) scale(1);
+}
+
+.profile-socials a:hover,
+.tech-item:hover,
+.tech-logo:hover {
+  z-index: 25;
+}
+
+@media (max-width: 700px) {
+  .profile-socials a::after,
+  .tech-item::after,
+  .tech-logo::after {
+    padding: 7px 10px;
+    font-size: 10px;
+    bottom: calc(100% + 10px);
+  }
+}
+
+/* Boton de descarga CV adaptado al portfolio */
+.cv-download.Documents-btn {
+  margin: -4px auto 24px;
+  height: 46px;
+  padding: 0 16px 0 13px;
+  border: 1px solid rgba(216, 255, 98, 0.24);
+  border-radius: 999px;
+  background:
+    linear-gradient(135deg, rgba(216, 255, 98, 0.13), rgba(255, 255, 255, 0.035)),
+    rgba(12, 14, 12, 0.66);
+  color: var(--text);
+  box-shadow:
+    0 16px 38px rgba(0, 0, 0, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.cv-download .folderContainer {
+  width: 38px;
+}
+
+.cv-download .text {
+  color: var(--text);
+  font: 700 13px/1 "DM Mono", monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.cv-download .filePage {
+  filter: saturate(0.85) brightness(1.05);
+}
+
+.cv-download .fileBack,
+.cv-download .fileFront,
+.cv-download .filePage {
+  filter: drop-shadow(0 4px 10px rgba(216, 255, 98, 0.12));
+}
+
+.cv-download:hover {
+  border-color: rgba(216, 255, 98, 0.56);
+  background:
+    linear-gradient(135deg, rgba(216, 255, 98, 0.2), rgba(255, 255, 255, 0.055)),
+    rgba(14, 18, 13, 0.78);
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.32),
+    0 0 28px rgba(216, 255, 98, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.cv-download:focus-visible {
+  outline: 2px solid rgba(216, 255, 98, 0.72);
+  outline-offset: 4px;
+}
+
+@media (max-width: 420px) {
+  .cv-download.Documents-btn {
+    height: 44px;
+    margin-bottom: 22px;
+    padding-inline: 13px 15px;
+  }
+
+  .cv-download .folderContainer {
+    width: 36px;
+  }
+
+  .cv-download .text {
+    font-size: 12px;
+  }
+}
+
+/* Color sobrio para carpeta CV */
+.cv-download .fileBack,
+.cv-download .fileFront {
+  filter:
+    drop-shadow(0 4px 10px rgba(0, 0, 0, 0.34))
+    drop-shadow(0 0 8px rgba(216, 255, 98, 0.08));
+}
+
+.cv-download .filePage {
+  filter:
+    saturate(0.5)
+    brightness(1.12)
+    drop-shadow(0 3px 8px rgba(255, 255, 255, 0.1));
+}
+
+/* Quita completamente el cursor al terminar typewriter fijo */
+.type-line.is-done::after {
+  content: none;
+  display: none;
+  animation: none;
+}
+
+/* Centrado final del nombre y usuario en hero */
+.hero-name,
+.handle {
+  width: auto;
+  max-width: min(100%, calc(100vw - 32px));
+  text-align: center;
+}
+
+.hero-name {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.handle {
+  display: block;
 }
