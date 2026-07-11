@@ -35,6 +35,13 @@ const translations = {
     contactLabel: "04 / Contacto",
     contactTitle: "Construyamos algo<br />",
     contactLink: "con tecnologia.",
+    builtProjectsLabel: "04 / Proyectos",
+    builtProjectsTitle: "Proyectos que he construido.",
+    builtProjectsIntro: "Una selección de soluciones donde aplico desarrollo, diseño y tecnología.",
+    builtProjectType: "PROYECTO FULLSTACK",
+    builtProjectCopy: "Sistema desarrollado para llevar un control de usuarios y gestionar pagos de servicios de internet, con un panel administrativo y un panel para clientes.",
+    builtProjectLink: "Ver proyecto",
+    contactLabel: "05 / Contacto",
     contactCopy: "Estoy abierto a seguir aprendiendo, colaborar en proyectos y construir soluciones que unan infraestructura, soporte y desarrollo.",
     footerRole: "INFRAESTRUCTURA TI / FULLSTACK"
   },
@@ -74,6 +81,13 @@ const translations = {
     contactLabel: "04 / Contact",
     contactTitle: "Let's build something<br />",
     contactLink: "with technology.",
+    builtProjectsLabel: "04 / Projects",
+    builtProjectsTitle: "Projects I have built.",
+    builtProjectsIntro: "A selection of solutions where I apply development, design, and technology.",
+    builtProjectType: "FULLSTACK PROJECT",
+    builtProjectCopy: "A system developed to manage users and internet service payments, with an administrative dashboard and a customer panel.",
+    builtProjectLink: "View project",
+    contactLabel: "05 / Contact",
     contactCopy: "I am open to keep learning, collaborate on projects, and build solutions that connect infrastructure, support, and development.",
     footerRole: "IT INFRASTRUCTURE / FULLSTACK"
   }
@@ -135,6 +149,13 @@ function applyLanguage(language) {
   setText('#proyectos .project:nth-child(3) p', t.project3Copy);
   setText('#contacto .label', t.contactLabel);
   setText('#contacto .contact-title', t.contactTitle + '<span class="accent-text">' + t.contactLink + '</span>', true);
+  setText('#mis-proyectos .label', t.builtProjectsLabel);
+  setText('#mis-proyectos h2', t.builtProjectsTitle);
+  setText('#mis-proyectos .projects-heading p', t.builtProjectsIntro);
+  setText('#mis-proyectos .project-card-type', t.builtProjectType);
+  setText('#mis-proyectos .project-card-description', t.builtProjectCopy);
+  setText('#mis-proyectos .project-card-link-text', t.builtProjectLink);
+  setText('#contacto .label', t.contactLabel);
   setText('#contacto .contact-copy', t.contactCopy);
   setText('#contacto .footer-line span:last-child', t.footerRole);
 
@@ -360,7 +381,55 @@ if (typeof particlesJS === "function") {
   retina_detect: true,
   });
 }
+// Carrusel de proyectos: agrega cada nuevo proyecto como .project-slide.
+const projectsCarousel = document.querySelector('.projects-carousel');
 
+if (projectsCarousel) {
+  const track = projectsCarousel.querySelector('.projects-track');
+  const slides = [...projectsCarousel.querySelectorAll('.project-slide')];
+  const dotsContainer = projectsCarousel.querySelector('.carousel-dots');
+  const previousButton = projectsCarousel.querySelector('.carousel-prev');
+  const nextButton = projectsCarousel.querySelector('.carousel-next');
+  let activeProject = 0;
+  let carouselTimer;
 
+  const dots = slides.map((_, index) => {
+    const dot = document.createElement('button');
+    dot.className = 'carousel-dot';
+    dot.type = 'button';
+    dot.setAttribute('aria-label', `Ir al proyecto ${index + 1}`);
+    dot.addEventListener('click', () => showProject(index, true));
+    dotsContainer.appendChild(dot);
+    return dot;
+  });
 
+  function showProject(index, restart = false) {
+    activeProject = (index + slides.length) % slides.length;
+    track.style.transform = `translate3d(-${activeProject * 100}%, 0, 0)`;
+    dots.forEach((dot, dotIndex) => {
+      dot.classList.toggle('is-active', dotIndex === activeProject);
+      dot.setAttribute('aria-current', dotIndex === activeProject ? 'true' : 'false');
+    });
+    if (restart) startCarousel();
+  }
 
+  function startCarousel() {
+    clearInterval(carouselTimer);
+    if (slides.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      carouselTimer = setInterval(() => showProject(activeProject + 1), 6500);
+    }
+  }
+
+  previousButton.addEventListener('click', () => showProject(activeProject - 1, true));
+  nextButton.addEventListener('click', () => showProject(activeProject + 1, true));
+  projectsCarousel.addEventListener('mouseenter', () => clearInterval(carouselTimer));
+  projectsCarousel.addEventListener('mouseleave', startCarousel);
+  projectsCarousel.addEventListener('focusin', () => clearInterval(carouselTimer));
+  projectsCarousel.addEventListener('focusout', startCarousel);
+
+  const hasMultipleProjects = slides.length > 1;
+  previousButton.disabled = !hasMultipleProjects;
+  nextButton.disabled = !hasMultipleProjects;
+  showProject(0);
+  startCarousel();
+}
