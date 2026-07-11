@@ -50,4 +50,4 @@ window.addEventListener("load", () => {
   window.setTimeout(finishLoading, 650);
 });
 
-window.setTimeout(finishLoading, 3200);
+window.setTimeout(finishLoading, 3500);

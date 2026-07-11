@@ -15,11 +15,13 @@
       rel="stylesheet"
     />
     <link rel="icon" href="assets/img/GRM-logo-32px.png" />
-    <link rel="stylesheet" href="assets/css/loadstyle.css" />
+    <!-- <link rel="stylesheet" href="assets/css/loadstyle.css" /> -->
+    <link rel="stylesheet" href="assets/css/loadstyle2.css" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body class="portfolio-loading">
-    <div class="preloader" id="preloader" role="status" aria-live="polite">
+    <!-- Loader anterior
+    <div class="preloader preloader-old" role="status" aria-live="polite">
       <div class="preloader-shell">
         <div class="preloader-brand">GRM<span>.</span></div>
         <div class="loader" aria-hidden="true">
@@ -36,7 +38,70 @@
         </div>
       </div>
     </div>
+    -->
 
+    <div
+      class="preloader preloader-vader"
+      id="preloader"
+      role="status"
+      aria-live="polite"
+    >
+      <div class="preloader-shell vader-shell">
+        <div class="preloader-brand">GRM<span>.</span></div>
+        <div class="vader" aria-hidden="true">
+          <div class="shadow"></div>
+          <div class="head">
+            <div class="helmet">
+              <span class="left"></span><span class="right"></span>
+            </div>
+            <div class="eyes">
+              <span class="left"></span><span class="right"></span>
+            </div>
+            <span class="grill"
+              ><span class="left"></span><span class="center"></span
+              ><span class="right"></span
+            ></span>
+            <span class="mask"
+              ><span class="top"></span><span class="left"></span
+              ><span class="center"></span><span class="right"></span
+            ></span>
+            <span class="line"></span>
+          </div>
+          <div class="torso">
+            <span class="neck"
+              ><span class="left"></span><span class="center"></span
+              ><span class="right"></span><span class="bottom"></span
+            ></span>
+            <span class="belt"><span class="center"></span></span>
+            <div class="plate">
+              <span class="red_top"></span><span class="red_center"></span
+              ><span class="red_bottom"></span><span class="blue"></span
+              ><span class="gray"></span>
+            </div>
+          </div>
+          <div class="hand left"><span class="hand"></span></div>
+          <div class="hand right animation-right">
+            <span class="hand"></span>
+          </div>
+          <div class="legs">
+            <span class="left"></span><span class="right"></span>
+          </div>
+          <div class="boots">
+            <span class="left"></span><span class="right"></span>
+          </div>
+          <div class="sword animation-left">
+            <span class="handle"></span><span class="light"></span>
+          </div>
+        </div>
+        <p class="loading-text">Preparando portafolio</p>
+        <div class="progress-bar" aria-hidden="true">
+          <div class="progress"></div>
+        </div>
+        <div class="loading-meta">
+          <span>INFRAESTRUCTURA TI</span><span>FULLSTACK DEV</span>
+        </div>
+      </div>
+    </div>
     <div id="particles-js"></div>
 
     <div class="cursor-dot" id="cursorDot"></div>
@@ -45,14 +110,38 @@
 
     <main class="wrap">
       <nav>
-        <a class="brand" href="#inicio" data-hoverable
-          >GERARD RENGIFO<span></span
+        <a class="brand" href="#" data-hoverable
+          >GERARD RENGIFO
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-patch-check-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708"
+              /></svg></span
         ></a>
         <div class="nav-links">
           <a href="#sobre-mi" data-hoverable>SOBRE MI</a>
           <a href="#stack" data-hoverable>STACK</a>
           <a href="#proyectos" data-hoverable>ENFOQUE</a>
           <a href="#contacto" data-hoverable>CONTACTO</a>
+          <div class="language-switcher" aria-label="Seleccionar idioma">
+            <input
+              id="lang-es"
+              name="language"
+              type="radio"
+              value="es"
+              checked
+            />
+            <label for="lang-es" data-hoverable>ES</label>
+            <input id="lang-en" name="language" type="radio" value="en" />
+            <label for="lang-en" data-hoverable>EN</label>
+          </div>
         </div>
       </nav>
 
@@ -79,7 +168,7 @@
             class="type-line hero-name"
             data-typewriter
             data-text="Gerard Rengifo"
-            data-speed="70"
+            data-speed="80"
             data-delay="1200"
           ></h1>
           <p
@@ -353,7 +442,7 @@
         <h2>Un perfil entre infraestructura y desarrollo.</h2>
 
         <div class="work-list">
-          <a class="project reveal" style="--i: 0" href="#" data-hoverable>
+          <article class="project reveal" style="--i: 0" data-hoverable>
             <span class="number">01</span>
             <span>
               <h3>Infraestructura TI</h3>
@@ -363,10 +452,10 @@
               </p>
               <span class="project-type">NETWORKS / IT SUPPORT</span>
             </span>
-            <span class="arrow">↗</span>
-          </a>
+            <span class="project-arrow" aria-hidden="true"></span>
+          </article>
 
-          <a class="project reveal" style="--i: 1" href="#" data-hoverable>
+          <article class="project reveal" style="--i: 1" data-hoverable>
             <span class="number">02</span>
             <span>
               <h3>Desarrollo fullstack</h3>
@@ -376,10 +465,10 @@
               </p>
               <span class="project-type">FRONTEND / BACKEND</span>
             </span>
-            <span class="arrow">↗</span>
-          </a>
+            <span class="project-arrow" aria-hidden="true"></span>
+          </article>
 
-          <a class="project reveal" style="--i: 2" href="#" data-hoverable>
+          <article class="project reveal" style="--i: 2" data-hoverable>
             <span class="number">03</span>
             <span>
               <h3>Crecimiento profesional</h3>
@@ -389,47 +478,66 @@
               </p>
               <span class="project-type">LEARNING / CAREER</span>
             </span>
-            <span class="arrow">↗</span>
-          </a>
+            <span class="project-arrow" aria-hidden="true"></span>
+          </article>
         </div>
       </section>
 
-      <footer id="contacto" class="reveal">
+      <footer id="contacto" class="contact-footer reveal">
         <div class="label">04 / Contacto</div>
-        <div class="contact-title">
-          Construyamos algo<br /><a
+        <h2 class="contact-title">
+          Construyamos algo<br />
+          <span class="accent-text">con tecnologia.</span>
+        </h2>
+        <p class="contact-copy">
+          Estoy abierto a seguir aprendiendo, colaborar en proyectos y construir
+          soluciones que unan infraestructura, soporte y desarrollo.
+        </p>
+        <div class="footer-socials" aria-label="Redes sociales">
+          <a
             href="https://github.com/GerardMichalle"
             target="_blank"
             rel="noreferrer"
             data-hoverable
-            >con tecnologia.</a
+            title="GitHub"
           >
+            <ion-icon name="logo-github"></ion-icon>
+            <span>GitHub</span>
+          </a>
+          <a
+            href="https://www.instagram.com/gerardrm2005/?hl=es"
+            target="_blank"
+            rel="noreferrer"
+            data-hoverable
+            title="Instagram"
+          >
+            <ion-icon name="logo-instagram"></ion-icon>
+            <span>Instagram</span>
+          </a>
+          <a
+            href="https://www.facebook.com/gerardmurayari"
+            target="_blank"
+            rel="noreferrer"
+            data-hoverable
+            title="Facebook"
+          >
+            <ion-icon name="logo-facebook"></ion-icon>
+            <span>Facebook</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/gerard-rengifo-murayari-36486a314/"
+            target="_blank"
+            rel="noreferrer"
+            data-hoverable
+            title="LinkedIn"
+          >
+            <ion-icon name="logo-linkedin"></ion-icon>
+            <span>LinkedIn</span>
+          </a>
         </div>
         <div class="footer-line">
-          <span>2026 GERARD</span>
-          <div class="socials">
-            <a
-              href="https://github.com/GerardMichalle"
-              target="_blank"
-              rel="noreferrer"
-              data-hoverable
-              >GITHUB</a
-            >
-            <a
-              href="https://www.instagram.com/gerardrm2005/?hl=es"
-              target="_blank"
-              rel="noreferrer"
-              data-hoverable
-              >INSTAGRAM</a
-            >
-            <a
-              href="https://www.facebook.com/gerardmurayari"
-              target="_blank"
-              rel="noreferrer"
-              data-hoverable
-              >FACEBOOK</a
-            >
-          </div>
+          <span>© 2026 Gerard Rengifo. Todos los derechos reservados.</span>
+          <span>INFRAESTRUCTURA TI / FULLSTACK</span>
         </div>
       </footer>
     </main>
@@ -449,7 +557,3 @@
     ></script>
   </body>
 </html>
-
-
-
-
