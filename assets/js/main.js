@@ -228,17 +228,19 @@ if (dot && ring) {
   moveRing();
 }
 
-document.querySelectorAll("[data-hoverable]").forEach((element) => {
-  element.addEventListener("mouseenter", () => {
-    dot?.classList.add("hover");
-    ring?.classList.add("hover");
-  });
+document
+  .querySelectorAll("[data-hoverable], .tech-logo, .cap-card")
+  .forEach((element) => {
+    element.addEventListener("mouseenter", () => {
+      dot?.classList.add("hover");
+      ring?.classList.add("hover");
+    });
 
-  element.addEventListener("mouseleave", () => {
-    dot?.classList.remove("hover");
-    ring?.classList.remove("hover");
+    element.addEventListener("mouseleave", () => {
+      dot?.classList.remove("hover");
+      ring?.classList.remove("hover");
+    });
   });
-});
 
 function typeText(element) {
   const text = element.dataset.text || "";

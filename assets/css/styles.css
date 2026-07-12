@@ -2292,3 +2292,490 @@ h2,
 .handle {
   display: block;
 }
+
+/* Mascota animada: perrito asomandose */
+#pet-peek {
+  position: fixed;
+  right: 12px;
+  bottom: 0;
+  z-index: 9999;
+  width: 92px;
+  height: 92px;
+  overflow: visible;
+  pointer-events: none;
+  transform: translateY(118%);
+  animation: pet-peek-cycle 8s ease-in-out infinite;
+  will-change: transform;
+}
+
+.petw-main {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 23.5vmax;
+  height: 23.5vmax;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.19);
+  transform-origin: bottom right;
+}
+
+.petw-leg {
+  position: absolute;
+  bottom: 0;
+  width: 2vmax;
+  height: 2.125vmax;
+}
+
+.petw-paw {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 1.95vmax;
+  height: 1.8vmax;
+  overflow: hidden;
+}
+
+.petw-paw::before {
+  content: "";
+  position: absolute;
+  width: 5vmax;
+  height: 3vmax;
+  border-radius: 50%;
+}
+
+.petw-top {
+  position: absolute;
+  bottom: 0;
+  left: 0.75vmax;
+  height: 4.5vmax;
+  width: 2.625vmax;
+  border-top-left-radius: 1.425vmax;
+  border-top-right-radius: 1.425vmax;
+  transform-origin: bottom right;
+  transform: rotateZ(90deg) translateX(-0.1vmax) translateY(1.5vmax);
+  z-index: -1;
+  background-image: linear-gradient(70deg, transparent 20%, #d4a373 20%);
+}
+
+.petw-dog {
+  position: relative;
+  width: 20vmax;
+  height: 8vmax;
+  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.22));
+}
+
+.petw-dog::before {
+  content: "";
+  position: absolute;
+  right: -0.15vmax;
+  bottom: -0.75vmax;
+  z-index: -1000;
+  width: 100%;
+  height: 1.5vmax;
+  border-radius: 50%;
+  background-color: rgba(216, 255, 98, 0.18);
+  animation: shadow 8s cubic-bezier(0.3, 0.41, 0.18, 1.01) infinite;
+}
+
+.petw-dog__head {
+  position: absolute;
+  left: 4.5vmax;
+  bottom: 0;
+  width: 8vmax;
+  height: 5vmax;
+  border-top-left-radius: 4.05vmax;
+  border-top-right-radius: 4.05vmax;
+  border-bottom-right-radius: 3.3vmax;
+  border-bottom-left-radius: 3.3vmax;
+  background-color: #d4a373;
+  animation: head 8s cubic-bezier(0.3, 0.41, 0.18, 1.01) infinite;
+}
+
+.petw-dog__head-c {
+  position: absolute;
+  left: 1.5vmax;
+  bottom: 0;
+  z-index: -1;
+  width: 9.75vmax;
+  height: 8.25vmax;
+  animation: head 8s cubic-bezier(0.3, 0.41, 0.18, 1.01) infinite;
+}
+
+.petw-dog__snout {
+  position: absolute;
+  left: -1.5vmax;
+  bottom: 0;
+  width: 7.5vmax;
+  height: 3.75vmax;
+  border-top-right-radius: 3vmax;
+  border-bottom-right-radius: 3vmax;
+  border-bottom-left-radius: 4.5vmax;
+  background-color: #f3d5b5;
+  animation: snout 8s cubic-bezier(0.3, 0.41, 0.18, 1.01) infinite;
+}
+
+.petw-dog__snout::before {
+  content: "";
+  position: absolute;
+  top: -0.15vmax;
+  left: -0.1125vmax;
+  width: 1.875vmax;
+  height: 1.125vmax;
+  border-top-right-radius: 3vmax;
+  border-bottom-right-radius: 3vmax;
+  border-bottom-left-radius: 4.5vmax;
+  background-color: #1f231d;
+  animation: snout-b 8s cubic-bezier(0.3, 0.41, 0.18, 1.01) infinite;
+}
+
+.petw-dog__eye-l,
+.petw-dog__eye-r {
+  position: absolute;
+  top: -0.9vmax;
+  width: 0.675vmax;
+  height: 0.375vmax;
+  border-radius: 50%;
+  background-color: #111311;
+  animation: eye 8s cubic-bezier(0.3, 0.41, 0.18, 1.01) infinite;
+}
+
+.petw-dog__eye-l {
+  left: 27%;
+}
+
+.petw-dog__eye-r {
+  left: 65%;
+}
+
+.petw-dog__ear-l,
+.petw-dog__ear-r {
+  position: absolute;
+  width: 5vmax;
+  height: 3.3vmax;
+  border-top-left-radius: 3.3vmax;
+  border-top-right-radius: 3vmax;
+  border-bottom-right-radius: 5vmax;
+  border-bottom-left-radius: 5vmax;
+  background-color: #d4a373;
+}
+
+.petw-dog__ear-l {
+  top: 1.5vmax;
+  left: 10vmax;
+  z-index: -1;
+  transform-origin: bottom left;
+  transform: rotateZ(-50deg);
+  animation: ear-l 8s cubic-bezier(0.3, 0.41, 0.18, 1.01) infinite;
+}
+
+.petw-dog__ear-r {
+  top: 1.5vmax;
+  right: 3vmax;
+  z-index: -2;
+  transform-origin: bottom right;
+  transform: rotateZ(25deg);
+  animation: ear-r 8s cubic-bezier(0.3, 0.41, 0.18, 1.01) infinite;
+}
+
+.petw-dog__body {
+  position: absolute;
+  bottom: 0.3vmax;
+  left: 6vmax;
+  z-index: -2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 18vmax;
+  height: 4vmax;
+  border-top-left-radius: 3vmax;
+  border-top-right-radius: 6vmax;
+  border-bottom-right-radius: 1.5vmax;
+  border-bottom-left-radius: 6vmax;
+  background-color: #6f3f1f;
+  animation: body 8s cubic-bezier(0.3, 0.41, 0.18, 1.01) infinite;
+}
+
+.petw-dog__tail {
+  position: absolute;
+  top: 20px;
+  right: -1.5vmax;
+  width: 4vmax;
+  height: 3vmax;
+  border-radius: 1.5vmax;
+  background-color: #6f3f1f;
+}
+
+.petw-dog__paws {
+  position: absolute;
+  bottom: 0;
+  left: 7.5vmax;
+  width: 10vmax;
+  height: 3vmax;
+}
+
+.petw-dog__bl-leg {
+  left: -3vmax;
+  z-index: -10;
+}
+
+.petw-dog__bl-paw::before,
+.petw-dog__fl-paw::before,
+.petw-dog__fr-paw::before {
+  background-color: #fff8e6;
+}
+
+.petw-dog__bl-top {
+  background-image: linear-gradient(80deg, transparent 20%, #d4a373 20%);
+}
+
+.petw-dog__fl-leg {
+  left: 0;
+  z-index: 10;
+}
+
+.petw-dog__fr-leg {
+  right: 0;
+}
+
+@keyframes pet-peek-cycle {
+  0%,
+  8% {
+    transform: translateY(118%);
+  }
+  18%,
+  68% {
+    transform: translateY(0);
+  }
+  82%,
+  100% {
+    transform: translateY(118%);
+  }
+}
+
+@keyframes head {
+  0%, 10%, 20%, 26%, 28%, 90%, 100% {
+    height: 8.25vmax;
+    bottom: 0;
+    transform-origin: bottom right;
+    transform: rotateZ(0);
+  }
+  5%, 15%, 22%, 24%, 30% {
+    height: 8.1vmax;
+  }
+  32%, 50% {
+    height: 8.25vmax;
+  }
+  55%, 60% {
+    bottom: 0.75vmax;
+    transform-origin: bottom right;
+    transform: rotateZ(0);
+  }
+  70%, 80% {
+    bottom: 0.75vmax;
+    transform-origin: bottom right;
+    transform: rotateZ(10deg);
+  }
+}
+
+@keyframes body {
+  0%, 10%, 20%, 26%, 28%, 32%, 100% {
+    height: 7.2vmax;
+  }
+  5%, 15%, 22%, 24%, 30% {
+    height: 7.05vmax;
+  }
+}
+
+@keyframes ear-l {
+  0%, 10%, 20%, 26%, 28%, 82%, 100% {
+    transform: rotateZ(-50deg);
+  }
+  5%, 15%, 22%, 24% {
+    transform: rotateZ(-48deg);
+  }
+  30%, 31% {
+    transform: rotateZ(-30deg);
+  }
+  32%, 80% {
+    transform: rotateZ(-60deg);
+  }
+}
+
+@keyframes ear-r {
+  0%, 10%, 20%, 26%, 28% {
+    transform: rotateZ(20deg);
+  }
+  5%, 15%, 22%, 24% {
+    transform: rotateZ(18deg);
+  }
+  30%, 31% {
+    transform: rotateZ(10deg);
+  }
+  32%, 100% {
+    transform: rotateZ(25deg);
+  }
+}
+
+@keyframes snout {
+  0%, 10%, 20%, 26%, 28%, 82%, 100% {
+    height: 3.75vmax;
+  }
+  5%, 15%, 22%, 24% {
+    height: 3.45vmax;
+  }
+}
+
+@keyframes snout-b {
+  0%, 10%, 20%, 26%, 28%, 98%, 100% {
+    width: 1.875vmax;
+  }
+  5%, 15%, 22%, 24% {
+    width: 1.8vmax;
+  }
+  34%, 98% {
+    width: 1.275vmax;
+  }
+}
+
+@keyframes shadow {
+  0%, 10%, 20%, 26%, 28%, 30%, 84%, 100% {
+    width: 99%;
+  }
+  5%, 15%, 22%, 24% {
+    width: 101%;
+  }
+  34%, 81% {
+    width: 96%;
+  }
+}
+
+@keyframes eye {
+  0%, 30% {
+    width: 0.675vmax;
+    height: 0.3vmax;
+  }
+  32%, 59%, 90%, 100% {
+    width: 0.525vmax;
+    height: 0.525vmax;
+    transform: translateY(0);
+  }
+  60%, 75% {
+    transform: translateY(-0.3vmax);
+  }
+  80%, 85% {
+    transform: translateY(0.15vmax);
+  }
+}
+
+@media (max-width: 640px) {
+  #pet-peek {
+    right: 8px;
+    width: 65px;
+    height: 65px;
+  }
+
+  .petw-main {
+    transform: scale(0.14);
+  }
+}
+
+/* Mascota fija y mas visible en mobile */
+#pet-peek {
+  width: 104px;
+  height: 104px;
+  transform: translateY(0);
+  animation: none;
+}
+
+#pet-peek .petw-main {
+  transform: scale(0.21);
+}
+
+@media (max-width: 900px) {
+  #pet-peek {
+    right: 10px;
+    width: 104px;
+    height: 104px;
+  }
+
+  #pet-peek .petw-main {
+    transform: scale(0.2);
+  }
+}
+
+@media (max-width: 640px) {
+  #pet-peek {
+    right: 8px;
+    width: 96px;
+    height: 96px;
+  }
+
+  #pet-peek .petw-main {
+    transform: scale(0.19);
+  }
+}
+
+/* Ajuste extra: mascota mas grande en celular */
+@media (max-width: 640px) {
+  #pet-peek {
+    right: 6px;
+    width: 132px;
+    height: 132px;
+  }
+
+  #pet-peek .petw-main {
+    transform: scale(0.28);
+  }
+}
+
+@media (max-width: 390px) {
+  #pet-peek {
+    width: 124px;
+    height: 124px;
+  }
+
+  #pet-peek .petw-main {
+    transform: scale(0.26);
+  }
+}
+
+/* Ajuste posicion mascota: separada del scrollbar y apoyada al borde */
+#pet-peek {
+  right: max(18px, env(safe-area-inset-right));
+  bottom: -28px;
+  width: 122px;
+  height: 96px;
+  overflow: visible;
+}
+
+#pet-peek .petw-main {
+  transform: scale(0.21) translateY(7px);
+}
+
+@media (max-width: 900px) {
+  #pet-peek {
+    right: max(30px, env(safe-area-inset-right));
+    bottom: -8px;
+    width: 132px;
+    height: 104px;
+  }
+
+  #pet-peek .petw-main {
+    transform: scale(0.23) translateY(6px);
+  }
+}
+
+@media (max-width: 640px) {
+  #pet-peek {
+    right: max(24px, env(safe-area-inset-right));
+    bottom: -8px;
+    width: 138px;
+    height: 108px;
+  }
+
+  #pet-peek .petw-main {
+    transform: scale(0.29) translateY(5px);
+  }
+}
