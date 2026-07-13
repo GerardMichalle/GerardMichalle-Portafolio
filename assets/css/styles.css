@@ -3130,3 +3130,96 @@ h2,
 #proyectos .focus-card:focus-within .focus-card__media > img {
   opacity: 0.1;
 }
+
+@media (max-width: 560px) {
+  #proyectos .focus-card {
+    min-height: 300px;
+    display: grid;
+    place-items: center;
+    padding: 42px 28px 56px;
+  }
+
+  #proyectos .focus-card__content {
+    width: min(100%, 260px);
+    max-width: 260px;
+    margin-inline: auto;
+    justify-self: center;
+    align-self: center;
+    justify-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  #proyectos .focus-card h3 {
+    max-width: 12ch;
+    font-size: clamp(24px, 7vw, 30px);
+    line-height: 1.05;
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  #proyectos .focus-card p {
+    max-width: 25ch;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  #proyectos .focus-card .project-type {
+    width: 100%;
+    text-align: center;
+    font-size: 8.5px;
+    letter-spacing: 0.02em;
+  }
+}
+
+#proyectos .focus-card {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0;
+}
+
+#proyectos .focus-card__content {
+  grid-column: 1;
+  grid-row: 1;
+  place-self: center;
+  width: min(100%, 300px);
+  max-width: 300px;
+  text-align: center;
+}
+
+#proyectos .focus-card h3,
+#proyectos .focus-card p,
+#proyectos .focus-card .project-type {
+  justify-self: center;
+  text-align: center;
+}
+
+@media (max-width: 560px) {
+  #proyectos .focus-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    min-height: 300px;
+    padding: 34px 28px 50px;
+  }
+
+  #proyectos .focus-card__content {
+    grid-column: 1;
+    grid-row: 1;
+    place-self: center;
+    width: min(100%, 285px);
+    max-width: 285px;
+  }
+
+  #proyectos .focus-card h3 {
+    max-width: 15ch;
+    font-size: clamp(22px, 6.2vw, 28px);
+    line-height: 1.08;
+  }
+
+  #proyectos .focus-card p {
+    max-width: 27ch;
+    font-size: 13px;
+    line-height: 1.48;
+  }
+}
