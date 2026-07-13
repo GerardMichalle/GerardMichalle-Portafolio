@@ -17,7 +17,7 @@
     <link rel="icon" href="assets/img/GRM-logo-32px.png" />
     <!-- <link rel="stylesheet" href="assets/css/loadstyle.css" /> -->
     <link rel="stylesheet" href="assets/css/loadstyle2.css?v=20260712-ready" />
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260712-pet-pos" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260712-focus-img-render" />
   </head>
   <body class="portfolio-loading">
     <!-- Loader anterior
@@ -529,44 +529,65 @@
         <div class="label">03 / Enfoque actual</div>
         <h2>Un perfil entre infraestructura y desarrollo.</h2>
 
-        <div class="work-list">
-          <article class="project reveal" style="--i: 0" data-hoverable>
+        <div class="work-list focus-card-grid">
+          <article
+            class="project focus-card reveal"
+            style="--i: 0; --focus-image: url('assets/img/yo_logo.png'); --focus-position: center"
+            data-hoverable
+          >
+            <div class="focus-card__media" aria-hidden="true">
+              <img src="assets/img/yo_logo.png" alt="" />
+            </div>
             <span class="number">01</span>
-            <span>
+            <span class="project-arrow" aria-hidden="true"></span>
+            <div class="focus-card__content">
               <h3>Infraestructura TI</h3>
               <p>
                 Fortalecimiento en redes, telecomunicaciones, administracion de
                 sistemas y soporte.
               </p>
               <span class="project-type">NETWORKS / IT SUPPORT</span>
-            </span>
-            <span class="project-arrow" aria-hidden="true"></span>
+            </div>
           </article>
 
-          <article class="project reveal" style="--i: 1" data-hoverable>
+          <article
+            class="project focus-card reveal"
+            style="--i: 1; --focus-image: url('assets/img/yo_logo.png'); --focus-position: center"
+            data-hoverable
+          >
+            <div class="focus-card__media" aria-hidden="true">
+              <img src="assets/img/yo_logo2.png" alt="" />
+            </div>
             <span class="number">02</span>
-            <span>
+            <span class="project-arrow" aria-hidden="true"></span>
+            <div class="focus-card__content">
               <h3>Desarrollo fullstack</h3>
               <p>
                 Practica con React, TypeScript, Java, Spring Boot, Spring
                 Security y PostgreSQL.
               </p>
               <span class="project-type">FRONTEND / BACKEND</span>
-            </span>
-            <span class="project-arrow" aria-hidden="true"></span>
+            </div>
           </article>
 
-          <article class="project reveal" style="--i: 2" data-hoverable>
+          <article
+            class="project focus-card reveal"
+            style="--i: 2; --focus-image: url('assets/img/yo_logo.png'); --focus-position: 68% center"
+            data-hoverable
+          >
+            <div class="focus-card__media" aria-hidden="true">
+              <img src="assets/img/yo_logo3.png" alt="" />
+            </div>
             <span class="number">03</span>
-            <span>
+            <span class="project-arrow" aria-hidden="true"></span>
+            <div class="focus-card__content">
               <h3>Crecimiento profesional</h3>
               <p>
                 Perfil responsable, adaptable, proactivo y enfocado en
                 aprendizaje continuo.
               </p>
               <span class="project-type">LEARNING / CAREER</span>
-            </span>
-            <span class="project-arrow" aria-hidden="true"></span>
+            </div>
           </article>
         </div>
       </section>

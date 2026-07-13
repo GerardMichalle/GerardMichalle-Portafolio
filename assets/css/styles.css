@@ -2253,7 +2253,6 @@ h2,
   }
 }
 
-/* Color sobrio para carpeta CV */
 .cv-download .fileBack,
 .cv-download .fileFront {
   filter:
@@ -2268,14 +2267,14 @@ h2,
     drop-shadow(0 3px 8px rgba(255, 255, 255, 0.1));
 }
 
-/* Quita completamente el cursor al terminar typewriter fijo */
+
 .type-line.is-done::after {
   content: none;
   display: none;
   animation: none;
 }
 
-/* Centrado final del nombre y usuario en hero */
+
 .hero-name,
 .handle {
   width: auto;
@@ -2293,7 +2292,7 @@ h2,
   display: block;
 }
 
-/* Mascota animada: perrito asomandose */
+
 #pet-peek {
   position: fixed;
   right: 12px;
@@ -2681,7 +2680,6 @@ h2,
   }
 }
 
-/* Mascota fija y mas visible en mobile */
 #pet-peek {
   width: 104px;
   height: 104px;
@@ -2717,7 +2715,7 @@ h2,
   }
 }
 
-/* Ajuste extra: mascota mas grande en celular */
+
 @media (max-width: 640px) {
   #pet-peek {
     right: 6px;
@@ -2741,7 +2739,6 @@ h2,
   }
 }
 
-/* Ajuste posicion mascota: separada del scrollbar y apoyada al borde */
 #pet-peek {
   right: max(18px, env(safe-area-inset-right));
   bottom: -28px;
@@ -2778,4 +2775,358 @@ h2,
   #pet-peek .petw-main {
     transform: scale(0.29) translateY(5px);
   }
+}
+
+
+#proyectos .focus-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  border-top: 1px solid var(--line);
+  padding-top: 26px;
+}
+
+#proyectos .focus-card {
+  position: relative;
+  min-height: clamp(330px, 33vw, 430px);
+  display: grid;
+  place-items: center;
+  padding: 28px;
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: rgba(9, 11, 12, 0.74);
+  cursor: pointer;
+  transform: translateY(0);
+  transition:
+    transform 0.55s cubic-bezier(0.22, 0.72, 0.18, 1),
+    border-color 0.45s ease,
+    box-shadow 0.55s ease;
+}
+
+#proyectos .focus-card:active {
+  transform: scale(0.985);
+}
+
+#proyectos .focus-card::after {
+  content: "";
+  position: absolute;
+  right: 118%;
+  top: 50%;
+  z-index: 2;
+  width: 185%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 32% 30%, rgba(255, 255, 255, 0.36), transparent 0 18%),
+    var(--accent);
+  transform: translateY(-50%) scale(0.86);
+  transition:
+    right 0.66s cubic-bezier(0.22, 0.72, 0.18, 1),
+    transform 0.66s cubic-bezier(0.22, 0.72, 0.18, 1);
+}
+
+#proyectos .focus-card:hover,
+#proyectos .focus-card:focus-within {
+  transform: translateY(-8px);
+  border-color: rgba(216, 255, 98, 0.55);
+  box-shadow:
+    0 26px 70px rgba(0, 0, 0, 0.34),
+    0 0 36px rgba(216, 255, 98, 0.08);
+}
+
+#proyectos .focus-card:hover::after,
+#proyectos .focus-card:focus-within::after {
+  right: -43%;
+  transform: translateY(-50%) scale(1.08);
+}
+
+#proyectos .focus-card__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(180deg, rgba(3, 5, 6, 0.1), rgba(3, 5, 6, 0.58)),
+    radial-gradient(circle at 50% 38%, rgba(216, 255, 98, 0.16), transparent 32%),
+    var(--focus-image),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.075), rgba(216, 255, 98, 0.055));
+  background-size: cover;
+  background-position: center;
+  filter: saturate(0.92) contrast(1.04);
+  transform: scale(1.01);
+  transition:
+    opacity 0.45s ease,
+    filter 0.55s ease,
+    transform 0.75s cubic-bezier(0.22, 0.72, 0.18, 1);
+}
+
+#proyectos .focus-card:hover .focus-card__media,
+#proyectos .focus-card:focus-within .focus-card__media {
+  opacity: 0.18;
+  filter: saturate(0.4) blur(2px);
+  transform: scale(1.08);
+}
+
+#proyectos .focus-card .number,
+#proyectos .focus-card .project-arrow {
+  position: absolute;
+  z-index: 5;
+}
+
+#proyectos .focus-card .number {
+  top: 22px;
+  left: 22px;
+  color: var(--accent);
+}
+
+#proyectos .focus-card .project-arrow {
+  right: 22px;
+  bottom: 22px;
+  background: rgba(5, 7, 8, 0.58);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+#proyectos .focus-card__content {
+  position: relative;
+  z-index: 4;
+  max-width: 290px;
+  display: grid;
+  gap: 14px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(18px) scale(0.98);
+  transition:
+    opacity 0.45s ease 0.12s,
+    transform 0.55s cubic-bezier(0.22, 0.72, 0.18, 1) 0.08s;
+}
+
+#proyectos .focus-card:hover .focus-card__content,
+#proyectos .focus-card:focus-within .focus-card__content {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+#proyectos .focus-card h3 {
+  margin: 0;
+  color: var(--bg);
+  font-size: clamp(26px, 3vw, 34px);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+#proyectos .focus-card p {
+  margin: 0;
+  color: color-mix(in srgb, var(--bg) 78%, transparent);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+#proyectos .focus-card .project-type {
+  color: var(--bg);
+}
+
+#proyectos .focus-card:hover .number,
+#proyectos .focus-card:focus-within .number {
+  color: var(--bg);
+}
+
+#proyectos .focus-card:hover .project-arrow,
+#proyectos .focus-card:focus-within .project-arrow {
+  border-color: color-mix(in srgb, var(--bg) 36%, transparent);
+  background: color-mix(in srgb, var(--bg) 8%, transparent);
+}
+
+#proyectos .focus-card:hover .project-arrow::before,
+#proyectos .focus-card:focus-within .project-arrow::before {
+  border-color: var(--bg);
+}
+
+@media (max-width: 980px) {
+  #proyectos .focus-card-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  #proyectos .focus-card {
+    min-height: 310px;
+  }
+}
+
+@media (max-width: 560px) {
+  #proyectos .focus-card-grid {
+    padding-top: 22px;
+  }
+
+  #proyectos .focus-card {
+    min-height: 285px;
+    border-radius: 22px;
+    padding: 24px;
+  }
+
+  #proyectos .focus-card::after {
+    width: 230%;
+  }
+
+  #proyectos .focus-card .number {
+    top: 18px;
+    left: 18px;
+  }
+
+  #proyectos .focus-card .project-arrow {
+    right: 18px;
+    bottom: 18px;
+  }
+}
+
+#proyectos {
+  max-width: 1180px;
+  margin-inline: auto;
+}
+
+#proyectos .focus-card-grid {
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  gap: clamp(24px, 3vw, 38px);
+  padding-top: 34px;
+}
+
+#proyectos .focus-card {
+  min-height: clamp(340px, 28vw, 400px);
+  padding: clamp(24px, 2.4vw, 34px);
+}
+
+#proyectos .focus-card::after {
+  right: 115%;
+  width: 235%;
+}
+
+#proyectos .focus-card:hover::after,
+#proyectos .focus-card:focus-within::after {
+  right: -68%;
+}
+
+#proyectos .focus-card__content {
+  max-width: 280px;
+  margin-inline: auto;
+  justify-self: center;
+  gap: 12px;
+  justify-items: center;
+}
+
+#proyectos .focus-card h3 {
+  max-width: 13ch;
+  margin-inline: auto;
+  text-align: center;
+  font-size: clamp(22px, 2.25vw, 29px);
+  line-height: 1.02;
+  overflow-wrap: normal;
+  text-wrap: balance;
+}
+
+#proyectos .focus-card p {
+  max-width: 26ch;
+  margin-inline: auto;
+  text-align: center;
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+
+#proyectos .focus-card .project-type {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+@media (max-width: 1120px) {
+  #proyectos .focus-card-grid {
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 22px;
+  }
+
+  #proyectos .focus-card__content {
+    max-width: 205px;
+  }
+
+  #proyectos .focus-card h3 {
+    font-size: clamp(21px, 2vw, 25px);
+  }
+}
+
+@media (max-width: 980px) {
+  #proyectos .focus-card-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  #proyectos .focus-card {
+    min-height: 330px;
+  }
+
+  #proyectos .focus-card__content {
+    max-width: 300px;
+  }
+
+  #proyectos .focus-card h3 {
+    max-width: 14ch;
+    font-size: clamp(26px, 6vw, 34px);
+  }
+}
+
+#proyectos .focus-card__media {
+  background-image:
+    var(--focus-image),
+    radial-gradient(circle at 50% 45%, rgba(216, 255, 98, 0.14), transparent 34%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(216, 255, 98, 0.035));
+  background-size:
+    72% auto,
+    cover,
+    cover;
+  background-position:
+    center,
+    center,
+    center;
+  background-repeat: no-repeat;
+  opacity: 1;
+  filter: saturate(1.02) contrast(1.03);
+}
+
+#proyectos .focus-card:hover .focus-card__media,
+#proyectos .focus-card:focus-within .focus-card__media {
+  opacity: 0.1;
+  filter: saturate(0.5) blur(1.5px);
+}
+
+@media (max-width: 560px) {
+  #proyectos .focus-card__media {
+    background-size:
+      76% auto,
+      cover,
+      cover;
+  }
+}
+
+#proyectos .focus-card__media > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--focus-position, center);
+  opacity: 0.96;
+  filter: brightness(0.9) contrast(1.08) saturate(1.05);
+}
+
+#proyectos .focus-card__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(3, 5, 6, 0.06), rgba(3, 5, 6, 0.28));
+  pointer-events: none;
+}
+
+#proyectos .focus-card:hover .focus-card__media > img,
+#proyectos .focus-card:focus-within .focus-card__media > img {
+  opacity: 0.1;
 }
