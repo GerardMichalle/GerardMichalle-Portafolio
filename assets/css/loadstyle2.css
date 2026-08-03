@@ -1,10 +1,10 @@
 :root {
-  --bg: #0c0c0e;
-  --panel: rgba(17, 17, 20, .72);
-  --line: rgba(255, 255, 255, .12);
-  --text: #f4f2ed;
-  --muted: #a7a5a1;
-  --accent: #d8ff62;
+  --bg: #ffffff;
+  --panel: rgba(244, 244, 242, .9);
+  --line: rgba(10, 10, 10, .12);
+  --text: #111111;
+  --muted: #605f5a;
+  --accent: #111111;
 }
 
 * { box-sizing: border-box; }
@@ -14,7 +14,7 @@ body.portfolio-loading { overflow: hidden; }
 .loader-page {
   min-height: 100vh;
   margin: 0;
-  background: radial-gradient(circle at 50% 28%, rgba(216, 255, 98, .1), transparent 34%), linear-gradient(180deg, #0a0a0b 0%, var(--bg) 100%);
+  background: radial-gradient(circle at 50% 28%, rgba(10, 10, 10, .04), transparent 34%), linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
   color: var(--text);
   font-family: Manrope, sans-serif;
 }
@@ -26,7 +26,7 @@ body.portfolio-loading { overflow: hidden; }
   display: grid;
   place-items: center;
   padding: 24px;
-  background: radial-gradient(circle at 50% 34%, rgba(216, 255, 98, .12), transparent 32%), rgba(12, 12, 14, .96);
+  background: radial-gradient(circle at 50% 34%, rgba(10, 10, 10, .05), transparent 32%), rgba(255, 255, 255, .97);
   color: var(--text);
   transition: opacity .75s cubic-bezier(.18, .8, .18, 1), visibility .75s cubic-bezier(.18, .8, .18, 1), transform .75s cubic-bezier(.18, .8, .18, 1);
 }
@@ -58,7 +58,7 @@ body.portfolio-loading { overflow: hidden; }
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--panel);
-  box-shadow: 0 28px 90px rgba(0, 0, 0, .34), 0 0 70px rgba(216, 255, 98, .07);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, .12), 0 0 50px rgba(0, 0, 0, .05);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   overflow: hidden;
@@ -91,15 +91,15 @@ body.portfolio-loading { overflow: hidden; }
   height: 4px;
   overflow: hidden;
   border-radius: 999px;
-  background: rgba(255, 255, 255, .08);
+  background: rgba(10, 10, 10, .08);
 }
 
 .progress {
   width: 0;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, rgba(216, 255, 98, .45), var(--accent));
-  box-shadow: 0 0 22px rgba(216, 255, 98, .25);
+  background: linear-gradient(90deg, rgba(60, 60, 60, .8), var(--accent));
+  box-shadow: 0 0 16px rgba(0, 0, 0, .18);
   transition: width .22s ease;
 }
 
@@ -109,18 +109,18 @@ body.portfolio-loading { overflow: hidden; }
   justify-content: space-between;
   gap: 14px;
   margin-top: 16px;
-  color: rgba(244, 242, 237, .5);
+  color: rgba(16, 16, 16, .5);
   font: 9px "DM Mono", monospace;
 }
-/* From Uiverse.io by csemszepp */ 
+
 ::-moz-selection {
-  background: #d8ff62;
-  color: #0c0c0e
+  background: #111111;
+  color: #ffffff
 }
 
 ::selection {
-  background: #d8ff62;
-  color: #0c0c0e
+  background: #111111;
+  color: #ffffff
 }
 
 .text {
@@ -138,7 +138,7 @@ body.portfolio-loading { overflow: hidden; }
 }
 
 a {
-  color: #d8ff62;
+  color: #111111;
   text-decoration: none;
   cursor: pointer
 }
@@ -527,7 +527,7 @@ a:hover {
   top: 2px;
   width: 12px;
   height: 18px;
-  background: #d8ff62
+  background: #1a1a1a
 }
 
 .vader .plate .red_top::before {
@@ -556,7 +556,7 @@ a:hover {
   top: 12px;
   width: 12px;
   height: 8px;
-  background: #d8ff62
+  background: #1a1a1a
 }
 
 .vader .plate .red_center::before {
@@ -585,7 +585,7 @@ a:hover {
   bottom: 2px;
   width: 4px;
   height: 8px;
-  background: #d8ff62
+  background: #1a1a1a
 }
 
 .vader .plate .blue {
@@ -762,12 +762,12 @@ a:hover {
   height: 120px;
   margin-left: -10px;
   background: rgba(248,80,50,0);
-  background: -moz-linear-gradient(left, rgba(248,80,50,0) 10%, rgba(247,67,37,0) 20%, rgba(216,255,98,0.7) 40%, rgba(244,242,237,1) 50%, rgba(216,255,98,0.7) 60%, rgba(236,51,30,0) 80%, rgba(231,56,39,0) 90%);
-  background: -webkit-gradient(left top, right top, color-stop(10%, rgba(248,80,50,0)), color-stop(20%, rgba(247,67,37,0)), color-stop(40%, rgba(216,255,98,0.7)), color-stop(50%, rgba(244,242,237,1)), color-stop(60%, rgba(216,255,98,0.7)), color-stop(80%, rgba(236,51,30,0)), color-stop(90%, rgba(231,56,39,0)));
-  background: -webkit-linear-gradient(left, rgba(248,80,50,0) 10%, rgba(247,67,37,0) 20%, rgba(216,255,98,0.7) 40%, rgba(244,242,237,1) 50%, rgba(216,255,98,0.7) 60%, rgba(236,51,30,0) 80%, rgba(231,56,39,0) 90%);
-  background: -o-linear-gradient(left, rgba(248,80,50,0) 10%, rgba(247,67,37,0) 20%, rgba(216,255,98,0.7) 40%, rgba(244,242,237,1) 50%, rgba(216,255,98,0.7) 60%, rgba(236,51,30,0) 80%, rgba(231,56,39,0) 90%);
-  background: -ms-linear-gradient(left, rgba(248,80,50,0) 10%, rgba(247,67,37,0) 20%, rgba(216,255,98,0.7) 40%, rgba(244,242,237,1) 50%, rgba(216,255,98,0.7) 60%, rgba(236,51,30,0) 80%, rgba(231,56,39,0) 90%);
-  background: linear-gradient(to right, rgba(248,80,50,0) 10%, rgba(247,67,37,0) 20%, rgba(216,255,98,0.7) 40%, rgba(244,242,237,1) 50%, rgba(216,255,98,0.7) 60%, rgba(236,51,30,0) 80%, rgba(231,56,39,0) 90%);
+  background: -moz-linear-gradient(left, rgba(248,80,50,0) 10%, rgba(247,67,37,0) 20%, rgba(20,20,20,0.65) 40%, rgba(244,242,237,1) 50%, rgba(20,20,20,0.65) 60%, rgba(236,51,30,0) 80%, rgba(231,56,39,0) 90%);
+  background: -webkit-gradient(left top, right top, color-stop(10%, rgba(248,80,50,0)), color-stop(20%, rgba(247,67,37,0)), color-stop(40%, rgba(20,20,20,0.65)), color-stop(50%, rgba(244,242,237,1)), color-stop(60%, rgba(20,20,20,0.65)), color-stop(80%, rgba(236,51,30,0)), color-stop(90%, rgba(231,56,39,0)));
+  background: -webkit-linear-gradient(left, rgba(248,80,50,0) 10%, rgba(247,67,37,0) 20%, rgba(20,20,20,0.65) 40%, rgba(244,242,237,1) 50%, rgba(20,20,20,0.65) 60%, rgba(236,51,30,0) 80%, rgba(231,56,39,0) 90%);
+  background: -o-linear-gradient(left, rgba(248,80,50,0) 10%, rgba(247,67,37,0) 20%, rgba(20,20,20,0.65) 40%, rgba(244,242,237,1) 50%, rgba(20,20,20,0.65) 60%, rgba(236,51,30,0) 80%, rgba(231,56,39,0) 90%);
+  background: -ms-linear-gradient(left, rgba(248,80,50,0) 10%, rgba(247,67,37,0) 20%, rgba(20,20,20,0.65) 40%, rgba(244,242,237,1) 50%, rgba(20,20,20,0.65) 60%, rgba(236,51,30,0) 80%, rgba(231,56,39,0) 90%);
+  background: linear-gradient(to right, rgba(248,80,50,0) 10%, rgba(247,67,37,0) 20%, rgba(20,20,20,0.65) 40%, rgba(244,242,237,1) 50%, rgba(20,20,20,0.65) 60%, rgba(236,51,30,0) 80%, rgba(231,56,39,0) 90%);
 }
 
 .vader .sword .light::before {
@@ -778,7 +778,7 @@ a:hover {
   width: 3px;
   height: 120px;
   margin-left: -1px;
-  background: rgba(216,255,98,1);
+  background: #1a1a1a;
   z-index: -1
 }
 
@@ -852,7 +852,7 @@ a:hover {
 }
 
 .vader:hover .eyes .left {
-  background: #d8ff62
+  background: #1a1a1a
 }
 
 .vader:hover .eyes .right {

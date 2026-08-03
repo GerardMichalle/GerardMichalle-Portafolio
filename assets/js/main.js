@@ -12,16 +12,16 @@ const translations = {
     aboutTitle: "Tecnologia desde el hardware hasta el software",
     aboutCopy:
       "Me interesa entender como funcionan los sistemas por dentro: equipos, redes, infraestructura y tambien las aplicaciones que usan las personas. <strong>Mi objetivo es crecer como perfil tecnico capaz de resolver incidencias, mantener sistemas y construir soluciones web utiles.</strong>",
-    stackLabel: "02 / Stack y aprendizaje",
+    stackLabel: "03 / Stack y aprendizaje",
     stackTitle: "Areas que estoy fortaleciendo",
     cap1Tag: "Infraestructura TI",
     cap1Title: "Redes y telecomunicaciones",
     cap1Copy:
       "Interes en administracion de sistemas, soporte tecnico, conectividad e infraestructura tecnologica.",
-    cap2Tag: "Soporte tecnico",
-    cap2Title: "Diagnostico e incidencias",
+    cap2Tag: "Analisis de datos",
+    cap2Title: "SQL y Business Intelligence",
     cap2Copy:
-      "Experiencia en mantenimiento, revision de equipos electronicos y atencion orientada a resolver problemas.",
+      "Base solida en SQL y modelado relacional, formandome activamente en BI: ETL con SSIS, modelos analiticos con SSAS y dashboards en Tableau y Power BI.",
     cap3Tag: "Frontend",
     cap3Title: "HTML, CSS, TypeScript y React",
     cap3Copy:
@@ -30,28 +30,39 @@ const translations = {
     cap4Title: "Java, Spring Boot y PostgreSQL",
     cap4Copy:
       "Aprendizaje de APIs, seguridad con JWT, bases de datos relacionales, Docker y despliegue.",
-    focusLabel: "03 / Enfoque actual",
-    focusTitle: "Un perfil entre infraestructura y desarrollo",
-    project1Title: "Infraestructura TI",
-    project1Copy:
-      "Fortalecimiento en redes, telecomunicaciones, administracion de sistemas y soporte.",
-    project2Title: "Desarrollo fullstack",
-    project2Copy:
-      "Practica con React, TypeScript, Java, Spring Boot, Spring Security y PostgreSQL.",
-    project3Title: "Crecimiento profesional",
-    project3Copy:
-      "Perfil responsable, adaptable, proactivo y enfocado en aprendizaje continuo.",
+    focusLabel: "02 / Enfoque",
+    focusTitle: "Sobre mi",
+    focusCopy:
+      "Egresando de Ingenieria de Sistemas Computacionales (UPN), con base en SQL y modelado relacional, formandome activamente en Business Intelligence (SQL Server, ETL con SSIS, modelos analiticos con SSAS, dashboards en Tableau y Power BI) y con experiencia practica en soporte tecnico y redes (modelo OSI/TCP-IP, subnetting, Windows Server, Cisco Packet Tracer). Capacidad de analisis, orden en el manejo de datos, aprendizaje rapido y trabajo en equipo, con enfoque en convertir datos en informacion util para la toma de decisiones.",
+    factLocationLabel: "Ubicacion",
+    factLocationValue: "Peru",
+    factDegreeLabel: "Formacion",
+    factDegreeValue: "Ingenieria de Sistemas Computacionales — UPN",
     contactLabel: "04 / Contacto",
     contactTitle: "Construyamos algo<br />",
     contactLink: "con tecnologia",
     builtProjectsLabel: "04 / Proyectos",
     builtProjectsTitle: "Proyectos que he construido",
     builtProjectsIntro:
-      "Una selección de soluciones donde aplico desarrollo, diseño y tecnología.",
-    builtProjectType: "PROYECTO FULLSTACK",
+      "Una selección de soluciones donde aplico desarrollo, análisis de datos e infraestructura.",
+    filterAll: "Todos",
+    filterFullstack: "Fullstack",
+    filterSql: "SQL Server",
+    filterPython: "Python",
+    filterInfra: "Infraestructura",
     builtProjectCopy:
       "Sistema desarrollado para llevar un control de usuarios y gestionar pagos de servicios de internet, con un panel administrativo y un panel para clientes.",
-    builtProjectLink: "Ver proyecto",
+    builtProjectLink: "Ver en GitHub",
+    willaySubtitle:
+      "Sistema Integral de Gestion Escolar — RFID/NFC + Libreta Virtual",
+    willayCopy:
+      "Sistema web para colegios que automatiza el control de asistencia mediante tarjetas RFID/NFC o carnets QR, con libreta virtual, reportes exportables, alertas a padres y acceso por roles (Direccion, Administrador, Profesor, Alumno/Padre). Disenado multi-sede desde el inicio para escalar a varios colegios.",
+    willayStatus: "En proceso",
+    placeholderTitle: "Nombre del proyecto",
+    placeholderCopy:
+      "Describe aqui el objetivo del proyecto, las tecnologias usadas y el resultado obtenido.",
+    placeholderLink: "Enlace a GitHub",
+    placeholderImage: "Agrega tu imagen",
     contactLabel: "05 / Contacto",
     contactCopy:
       "Estoy abierto a seguir aprendiendo, colaborar en proyectos y construir soluciones que unan infraestructura, soporte y desarrollo.",
@@ -70,16 +81,16 @@ const translations = {
     aboutTitle: "Bridging the gap between hardware and software",
     aboutCopy:
       "I thrive on understanding how systems work under the hood—from hardware, networking, and infrastructure to user-facing applications. <strong>My goal is to grow into a versatile technical role, capable of troubleshooting systems, maintaining infrastructure, and building scalable web solutions.</strong>",
-    stackLabel: "02 / Stack & Learning",
+    stackLabel: "03 / Stack & Learning",
     stackTitle: "Core areas & ongoing learning",
     cap1Tag: "IT Infrastructure",
     cap1Title: "Networking & Telecommunications",
     cap1Copy:
       "Focused on sysadmin tasks, technical support, connectivity, and core IT infrastructure.",
-    cap2Tag: "Technical Support",
-    cap2Title: "Diagnostics & Troubleshooting",
+    cap2Tag: "Data Analysis",
+    cap2Title: "SQL & Business Intelligence",
     cap2Copy:
-      "Hands-on experience in hardware maintenance, diagnostics, and high-impact incident resolution.",
+      "Solid foundation in SQL and relational modeling, actively training in BI: ETL with SSIS, analytical models with SSAS, and dashboards in Tableau and Power BI.",
     cap3Tag: "Frontend",
     cap3Title: "HTML, CSS, TypeScript & React",
     cap3Copy:
@@ -88,25 +99,36 @@ const translations = {
     cap4Title: "Java, Spring Boot & PostgreSQL",
     cap4Copy:
       "Developing RESTful APIs, JWT authentication, relational databases, Docker, and deployment workflows.",
-    focusLabel: "03 / Current Focus",
-    focusTitle: "Combining infrastructure and development",
-    project1Title: "IT Infrastructure",
-    project1Copy:
-      "Deepening my knowledge in networking, sysadmin workloads, and infrastructure support.",
-    project2Title: "Fullstack Development",
-    project2Copy:
-      "Actively building with React, TypeScript, Java, Spring Boot, Spring Security, and PostgreSQL.",
-    project3Title: "Professional Growth",
-    project3Copy:
-      "A responsible, proactive, and highly adaptable mindset driven by continuous learning.",
+    focusLabel: "02 / Focus",
+    focusTitle: "About me",
+    focusCopy:
+      "Graduating in Computer Systems Engineering (UPN), with a foundation in SQL and relational modeling, currently training in Business Intelligence (SQL Server, ETL with SSIS, analytical models with SSAS, dashboards in Tableau and Power BI), and hands-on experience in technical support and networking (OSI/TCP-IP model, subnetting, Windows Server, Cisco Packet Tracer). Strong analytical skills, structured data handling, fast learning, and teamwork, focused on turning data into useful information for decision-making.",
+    factLocationLabel: "Location",
+    factLocationValue: "Peru",
+    factDegreeLabel: "Degree",
+    factDegreeValue: "Computer Systems Engineering — UPN",
     builtProjectsLabel: "04 / Projects",
     builtProjectsTitle: "Featured Projects",
     builtProjectsIntro:
-      "A curated selection of applications merging code, design, and infrastructure.",
-    builtProjectType: "FULLSTACK APPLICATION",
+      "A curated selection of solutions applying development, data analysis, and infrastructure.",
+    filterAll: "All",
+    filterFullstack: "Fullstack",
+    filterSql: "SQL Server",
+    filterPython: "Python",
+    filterInfra: "Infrastructure",
     builtProjectCopy:
       "A user management and internet billing system featuring separate administrative and client dashboards.",
-    builtProjectLink: "View Project",
+    builtProjectLink: "View on GitHub",
+    willaySubtitle:
+      "Comprehensive School Management System — RFID/NFC + Virtual Report Card",
+    willayCopy:
+      "A web system for schools that automates attendance tracking via RFID/NFC cards or QR ID cards, with a virtual report card, exportable reports, parent alerts, and role-based access (Principal's Office, Administrator, Teacher, Student/Parent). Designed multi-campus from the start to scale to multiple schools.",
+    willayStatus: "In progress",
+    placeholderTitle: "Project name",
+    placeholderCopy:
+      "Describe the project's goal, technologies used, and the outcome here.",
+    placeholderLink: "GitHub link",
+    placeholderImage: "Add your image",
     contactLabel: "05 / Contact",
     contactTitle: "Let's build something<br />",
     contactLink: "impactful together.",
@@ -141,15 +163,22 @@ function applyLanguage(language) {
   document.documentElement.lang = language;
 
   setText('.nav-links a[href="#sobre-mi"]', t.navAbout);
+  setText('.nav-links a[href="#enfoque"]', t.navFocus);
   setText('.nav-links a[href="#stack"]', t.navStack);
-  setText('.nav-links a[href="#proyectos"]', t.navFocus);
   setText('.nav-links a[href="#contacto"]', t.navContact);
   setText(".status", "<i></i>" + t.status, true);
   setTypewriterText(".role", t.role);
   setText(".intro", t.intro);
   setText("#sobre-mi .label", t.aboutLabel);
-  setText("#sobre-mi h2", t.aboutTitle);
-  setText("#sobre-mi .about-copy", t.aboutCopy, true);
+  setText("#sobre-mi h2", t.focusTitle);
+  setText("#sobre-mi .about-detail-copy", t.focusCopy);
+  setText("#sobre-mi .about-fact-location .fact-label", t.factLocationLabel);
+  setText("#sobre-mi .about-fact-location .fact-value", t.factLocationValue);
+  setText("#sobre-mi .about-fact-degree .fact-label", t.factDegreeLabel);
+  setText("#sobre-mi .about-fact-degree .fact-value", t.factDegreeValue);
+  setText("#enfoque .label", t.focusLabel);
+  setText("#enfoque h2", t.aboutTitle);
+  setText("#enfoque .about-copy", t.aboutCopy, true);
   setText("#stack .label", t.stackLabel);
   setText("#stack h2", t.stackTitle);
   setText("#stack .cap-card:nth-child(1) .cap-tag", t.cap1Tag);
@@ -164,14 +193,6 @@ function applyLanguage(language) {
   setText("#stack .cap-card:nth-child(4) .cap-tag", t.cap4Tag);
   setText("#stack .cap-card:nth-child(4) h3", t.cap4Title);
   setText("#stack .cap-card:nth-child(4) p", t.cap4Copy);
-  setText("#proyectos .label", t.focusLabel);
-  setText("#proyectos h2", t.focusTitle);
-  setText("#proyectos .project:nth-child(1) h3", t.project1Title);
-  setText("#proyectos .project:nth-child(1) p", t.project1Copy);
-  setText("#proyectos .project:nth-child(2) h3", t.project2Title);
-  setText("#proyectos .project:nth-child(2) p", t.project2Copy);
-  setText("#proyectos .project:nth-child(3) h3", t.project3Title);
-  setText("#proyectos .project:nth-child(3) p", t.project3Copy);
   setText("#contacto .label", t.contactLabel);
   setText(
     "#contacto .contact-title",
@@ -181,9 +202,39 @@ function applyLanguage(language) {
   setText("#mis-proyectos .label", t.builtProjectsLabel);
   setText("#mis-proyectos h2", t.builtProjectsTitle);
   setText("#mis-proyectos .projects-heading p", t.builtProjectsIntro);
-  setText("#mis-proyectos .project-card-type", t.builtProjectType);
-  setText("#mis-proyectos .project-card-description", t.builtProjectCopy);
-  setText("#mis-proyectos .project-card-link-text", t.builtProjectLink);
+  setText('.filter-pill[data-filter="todos"]', t.filterAll);
+  setText('.filter-pill[data-filter="fullstack"]', t.filterFullstack);
+  setText('.filter-pill[data-filter="sql-server"]', t.filterSql);
+  setText('.filter-pill[data-filter="python"]', t.filterPython);
+  setText('.filter-pill[data-filter="infraestructura"]', t.filterInfra);
+  setText("#mis-proyectos .gallery-card:nth-child(1) p", t.builtProjectCopy);
+  setText(
+    "#mis-proyectos .gallery-card:nth-child(1) .gallery-card-link-text",
+    t.builtProjectLink,
+  );
+  document
+    .querySelectorAll("#mis-proyectos .gallery-card--placeholder")
+    .forEach((card) => {
+      const h3 = card.querySelector("h3");
+      const p = card.querySelector("p");
+      const linkText = card.querySelector(".gallery-card-link-text");
+      const imageLabel = card.querySelector(".gallery-card-image--empty span");
+      if (h3) h3.textContent = t.placeholderTitle;
+      if (p) p.textContent = t.placeholderCopy;
+      if (linkText) linkText.textContent = t.placeholderLink;
+      if (imageLabel) imageLabel.textContent = t.placeholderImage;
+    });
+  document
+    .querySelectorAll(
+      '#mis-proyectos .gallery-card[data-category="infraestructura"] .gallery-card-tag',
+    )
+    .forEach((tag) => {
+      tag.textContent = t.filterInfra;
+    });
+  setText('#mis-proyectos [data-project="willay"] .gallery-card-subtitle', t.willaySubtitle);
+  setText('#mis-proyectos [data-project="willay"] .gallery-card-body > p:not(.gallery-card-subtitle)', t.willayCopy);
+  setText('#mis-proyectos [data-project="willay"] .gallery-card-status', t.willayStatus);
+  setText('#mis-proyectos [data-project="willay"] .gallery-card-link-text', t.builtProjectLink);
   setText("#contacto .label", t.contactLabel);
   setText("#contacto .contact-copy", t.contactCopy);
   setText("#contacto .footer-line span:last-child", t.footerRole);
@@ -318,7 +369,7 @@ if (typeof particlesJS === "function") {
         },
       },
       color: {
-        value: "#ffffff",
+        value: "#0a0a0a",
       },
       shape: {
         type: "circle",
@@ -358,7 +409,7 @@ if (typeof particlesJS === "function") {
       line_linked: {
         enable: true,
         distance: 100,
-        color: "#ffffff",
+        color: "#fcf6f6",
         opacity: 0.4,
         width: 1,
       },
@@ -419,69 +470,166 @@ if (typeof particlesJS === "function") {
     retina_detect: true,
   });
 }
-// Carrusel de proyectos: agrega cada nuevo proyecto como .project-slide.
-const projectsCarousel = document.querySelector(".projects-carousel");
+// Filtro de proyectos: agrega cada nuevo proyecto como .gallery-card con
+// data-category, y un boton .filter-pill con el mismo data-filter para
+// que aparezca al filtrar.
+const projectsGallery = document.querySelector(".projects-gallery");
+const filterPills = document.querySelectorAll(".filter-pill");
 
-if (projectsCarousel) {
-  const track = projectsCarousel.querySelector(".projects-track");
-  const slides = [...projectsCarousel.querySelectorAll(".project-slide")];
-  const dotsContainer = projectsCarousel.querySelector(".carousel-dots");
-  const previousButton = projectsCarousel.querySelector(".carousel-prev");
-  const nextButton = projectsCarousel.querySelector(".carousel-next");
-  let activeProject = 0;
-  let carouselTimer;
+if (projectsGallery && filterPills.length) {
+  const cards = [...projectsGallery.querySelectorAll(".gallery-card")];
 
-  const dots = slides.map((_, index) => {
-    const dot = document.createElement("button");
-    dot.className = "carousel-dot";
-    dot.type = "button";
-    dot.setAttribute("aria-label", `Ir al proyecto ${index + 1}`);
-    dot.addEventListener("click", () => showProject(index, true));
-    dotsContainer.appendChild(dot);
-    return dot;
+  filterPills.forEach((pill) => {
+    pill.addEventListener("click", () => {
+      const filter = pill.dataset.filter;
+
+      filterPills.forEach((otherPill) => {
+        const isActive = otherPill === pill;
+        otherPill.classList.toggle("is-active", isActive);
+        otherPill.setAttribute("aria-pressed", isActive ? "true" : "false");
+      });
+
+      cards.forEach((card) => {
+        const matches = filter === "todos" || card.dataset.category === filter;
+        card.classList.toggle("is-hidden", !matches);
+      });
+    });
+  });
+}
+
+// Lightbox: modal para ver las imagenes de los proyectos en grande.
+// Abrir con openLightbox(images, startIndex); cierra con Escape, click en
+// el fondo o el boton de cerrar.
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = lightbox?.querySelector(".lightbox-image");
+const lightboxCounter = lightbox?.querySelector(".lightbox-counter");
+const lightboxPrev = lightbox?.querySelector(".lightbox-prev");
+const lightboxNext = lightbox?.querySelector(".lightbox-next");
+let lightboxImages = [];
+let lightboxIndex = 0;
+
+function renderLightbox() {
+  const current = lightboxImages[lightboxIndex];
+  if (!current || !lightboxImage) return;
+  lightboxImage.src = current.src;
+  lightboxImage.alt = current.alt || "";
+  const isGallery = lightboxImages.length > 1;
+  lightboxPrev?.classList.toggle("is-hidden", !isGallery);
+  lightboxNext?.classList.toggle("is-hidden", !isGallery);
+  if (lightboxCounter) {
+    lightboxCounter.textContent = isGallery
+      ? `${lightboxIndex + 1} / ${lightboxImages.length}`
+      : "";
+  }
+}
+
+function openLightbox(images, startIndex = 0) {
+  if (!lightbox || !images.length) return;
+  lightboxImages = images;
+  lightboxIndex = startIndex;
+  renderLightbox();
+  lightbox.classList.add("is-open");
+  lightbox.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+
+function closeLightbox() {
+  if (!lightbox) return;
+  lightbox.classList.remove("is-open");
+  lightbox.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+}
+
+function showLightboxImage(delta) {
+  if (!lightboxImages.length) return;
+  lightboxIndex =
+    (lightboxIndex + delta + lightboxImages.length) % lightboxImages.length;
+  renderLightbox();
+}
+
+if (lightbox) {
+  lightbox.querySelectorAll("[data-lightbox-close]").forEach((element) => {
+    element.addEventListener("click", closeLightbox);
+  });
+  lightboxPrev?.addEventListener("click", () => showLightboxImage(-1));
+  lightboxNext?.addEventListener("click", () => showLightboxImage(1));
+  document.addEventListener("keydown", (event) => {
+    if (!lightbox.classList.contains("is-open")) return;
+    if (event.key === "Escape") closeLightbox();
+    if (event.key === "ArrowLeft") showLightboxImage(-1);
+    if (event.key === "ArrowRight") showLightboxImage(1);
+  });
+}
+
+// Imagen simple (una sola foto) con lightbox: click para ver en grande.
+document
+  .querySelectorAll(".gallery-card-image[data-lightbox-trigger]:not(.gallery-card-image--slider)")
+  .forEach((container) => {
+    const img = container.querySelector("img");
+    if (!img) return;
+    container.addEventListener("click", () => {
+      openLightbox([{ src: img.src, alt: img.alt }], 0);
+    });
   });
 
-  function showProject(index, restart = false) {
-    activeProject = (index + slides.length) % slides.length;
-    track.style.transform = `translate3d(-${activeProject * 100}%, 0, 0)`;
-    dots.forEach((dot, dotIndex) => {
-      dot.classList.toggle("is-active", dotIndex === activeProject);
-      dot.setAttribute(
-        "aria-current",
-        dotIndex === activeProject ? "true" : "false",
-      );
+// Mini-carrusel para cards con varias imagenes: [data-slider] con
+// .gallery-slider-track > img, flechas .gallery-slider-prev/next y
+// puntos .gallery-slider-dot. Soporta click, teclado, deslizar (touch/mouse)
+// y abre el lightbox al tocar la imagen (sin arrastrar).
+document.querySelectorAll("[data-slider]").forEach((slider) => {
+  const track = slider.querySelector(".gallery-slider-track");
+  const slides = [...track.children];
+  const dots = [...slider.querySelectorAll(".gallery-slider-dot")];
+  const prevButton = slider.querySelector(".gallery-slider-prev");
+  const nextButton = slider.querySelector(".gallery-slider-next");
+  const isControl = (target) =>
+    target.closest(".gallery-slider-arrow, .gallery-slider-dot");
+  let index = 0;
+
+  function goTo(newIndex) {
+    index = (newIndex + slides.length) % slides.length;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach((dot, dotIndex) =>
+      dot.classList.toggle("is-active", dotIndex === index),
+    );
+  }
+
+  prevButton?.addEventListener("click", (event) => {
+    event.stopPropagation();
+    goTo(index - 1);
+  });
+  nextButton?.addEventListener("click", (event) => {
+    event.stopPropagation();
+    goTo(index + 1);
+  });
+  dots.forEach((dot, dotIndex) => {
+    dot.addEventListener("click", (event) => {
+      event.stopPropagation();
+      goTo(dotIndex);
     });
-    if (restart) startCarousel();
-  }
+  });
 
-  function startCarousel() {
-    clearInterval(carouselTimer);
-    if (
-      slides.length > 1 &&
-      !window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    ) {
-      carouselTimer = setInterval(() => showProject(activeProject + 1), 6500);
+  let dragStartX = null;
+
+  slider.addEventListener("pointerdown", (event) => {
+    if (isControl(event.target)) return;
+    dragStartX = event.clientX;
+  });
+  slider.addEventListener("pointerup", (event) => {
+    if (dragStartX === null || isControl(event.target)) return;
+    const delta = event.clientX - dragStartX;
+    dragStartX = null;
+    if (Math.abs(delta) < 12) {
+      openLightbox(
+        slides.map((slide) => ({ src: slide.src, alt: slide.alt })),
+        index,
+      );
+      return;
     }
-  }
-
-  previousButton.addEventListener("click", () =>
-    showProject(activeProject - 1, true),
-  );
-  nextButton.addEventListener("click", () =>
-    showProject(activeProject + 1, true),
-  );
-  projectsCarousel.addEventListener("mouseenter", () =>
-    clearInterval(carouselTimer),
-  );
-  projectsCarousel.addEventListener("mouseleave", startCarousel);
-  projectsCarousel.addEventListener("focusin", () =>
-    clearInterval(carouselTimer),
-  );
-  projectsCarousel.addEventListener("focusout", startCarousel);
-
-  const hasMultipleProjects = slides.length > 1;
-  previousButton.disabled = !hasMultipleProjects;
-  nextButton.disabled = !hasMultipleProjects;
-  showProject(0);
-  startCarousel();
-}
+    if (Math.abs(delta) < 40) return;
+    goTo(delta < 0 ? index + 1 : index - 1);
+  });
+  slider.addEventListener("pointerleave", () => {
+    dragStartX = null;
+  });
+});
