@@ -421,7 +421,7 @@ function initParticles(color) {
         },
       },
       line_linked: {
-        enable: true,
+        enable: false,
         distance: 100,
         color: color,
         opacity: 0.4,
@@ -485,8 +485,6 @@ function initParticles(color) {
   });
 }
 
-// Modo claro/oscuro: boton animado en el nav, guarda la preferencia y
-// vuelve a pintar las particulas con un color legible en cada tema.
 const THEME_KEY = "portfolio-theme";
 const themeToggle = document.getElementById("themeToggle");
 const storedTheme = localStorage.getItem(THEME_KEY);
@@ -510,9 +508,7 @@ themeToggle?.addEventListener("click", () => {
   localStorage.setItem(THEME_KEY, currentTheme);
   applyTheme(currentTheme);
 });
-// Filtro de proyectos: agrega cada nuevo proyecto como .gallery-card con
-// data-category, y un boton .filter-pill con el mismo data-filter para
-// que aparezca al filtrar.
+
 const projectsGallery = document.querySelector(".projects-gallery");
 const filterPills = document.querySelectorAll(".filter-pill");
 
@@ -537,9 +533,7 @@ if (projectsGallery && filterPills.length) {
   });
 }
 
-// Lightbox: modal para ver las imagenes de los proyectos en grande.
-// Abrir con openLightbox(images, startIndex); cierra con Escape, click en
-// el fondo o el boton de cerrar.
+
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = lightbox?.querySelector(".lightbox-image");
 const lightboxCounter = lightbox?.querySelector(".lightbox-counter");
@@ -601,7 +595,7 @@ if (lightbox) {
   });
 }
 
-// Imagen simple (una sola foto) con lightbox: click para ver en grande.
+
 document
   .querySelectorAll(".gallery-card-image[data-lightbox-trigger]:not(.gallery-card-image--slider)")
   .forEach((container) => {
@@ -612,10 +606,6 @@ document
     });
   });
 
-// Mini-carrusel para cards con varias imagenes: [data-slider] con
-// .gallery-slider-track > img, flechas .gallery-slider-prev/next y
-// puntos .gallery-slider-dot. Soporta click, teclado, deslizar (touch/mouse)
-// y abre el lightbox al tocar la imagen (sin arrastrar).
 document.querySelectorAll("[data-slider]").forEach((slider) => {
   const track = slider.querySelector(".gallery-slider-track");
   const slides = [...track.children];

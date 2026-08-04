@@ -3439,3 +3439,25 @@ a.fact-value:hover {
 [data-theme="dark"] .project-card-image::after {
   background: linear-gradient(180deg, transparent 55%, rgba(10, 10, 10, 0.85));
 }
+
+/* Evita que el visitante arrastre/seleccione los textos largos (bio,
+   descripciones). El email y los enlaces de contacto quedan seleccionables
+   a proposito para que se puedan copiar. */
+.intro,
+.about-copy,
+.about-detail-copy,
+.cap-card p,
+.gallery-card-body p,
+.contact-copy {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.about-fact-email .fact-value {
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+}
