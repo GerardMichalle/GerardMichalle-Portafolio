@@ -7,7 +7,7 @@ const translations = {
     status: "Disponible para aprender y construir",
     role: "Infraestructura TI | Fullstack en formacion",
     intro:
-      "Estudiante de Ingenieria de Sistemas con base tecnica en electronica, soporte tecnico y resolucion de incidencias. Estoy construyendo un perfil que une redes, infraestructura TI y desarrollo fullstack.",
+      "Estudiante de Ingenieria de Sistemas con base tecnica en electronica, soporte tecnico y resolucion de incidencias. Estoy construyendo un perfil que une redes, infraestructura TI y analisis de datos.",
     aboutLabel: "01 / Sobre mi",
     aboutTitle: "Tecnologia desde el hardware hasta el software",
     aboutCopy:
@@ -64,9 +64,11 @@ const translations = {
     placeholderLink: "Enlace a GitHub",
     placeholderImage: "Agrega tu imagen",
     contactLabel: "05 / Contacto",
+    contactStatus: "Disponible para nuevas oportunidades",
+    contactCta: "Escribeme",
     contactCopy:
       "Estoy abierto a seguir aprendiendo, colaborar en proyectos y construir soluciones que unan infraestructura, soporte y desarrollo.",
-    footerRole: "INFRAESTRUCTURA TI / FULLSTACK",
+    footerRole: "INFRAESTRUCTURA TI / ANALISIS DE DATOS",
   },
   en: {
     navAbout: "ABOUT",
@@ -76,7 +78,7 @@ const translations = {
     status: "Open to learning and building",
     role: "IT Infrastructure | Aspiring Fullstack Developer",
     intro:
-      "Systems Engineering student with a technical background in electronics, IT support, and troubleshooting. I am bridging the gap between networking, infrastructure, and fullstack development.",
+      "Systems Engineering student with a technical background in electronics, IT support, and troubleshooting. I am bridging the gap between networking, infrastructure, and data analysis.",
     aboutLabel: "01 / About me",
     aboutTitle: "Bridging the gap between hardware and software",
     aboutCopy:
@@ -132,18 +134,17 @@ const translations = {
     contactLabel: "05 / Contact",
     contactTitle: "Let's build something<br />",
     contactLink: "impactful together.",
+    contactStatus: "Open to new opportunities",
+    contactCta: "Email me",
     contactCopy:
       "I'm open to new learning opportunities, engineering collaborations, and building solutions at the intersection of infrastructure and software development.",
-    footerRole: "IT INFRASTRUCTURE / FULLSTACK",
+    footerRole: "IT INFRASTRUCTURE / Data Analysis",
   },
 };
 
 const languageInputs = document.querySelectorAll('input[name="language"]');
 const storedLanguage = localStorage.getItem("portfolio-language");
-const browserLanguage = navigator.language?.toLowerCase().startsWith("en")
-  ? "en"
-  : "es";
-let currentLanguage = storedLanguage || browserLanguage;
+let currentLanguage = storedLanguage || "es";
 
 function setText(selector, value, html = false) {
   const element = document.querySelector(selector);
@@ -236,7 +237,9 @@ function applyLanguage(language) {
   setText('#mis-proyectos [data-project="willay"] .gallery-card-status', t.willayStatus);
   setText('#mis-proyectos [data-project="willay"] .gallery-card-link-text', t.builtProjectLink);
   setText("#contacto .label", t.contactLabel);
+  setText("#contacto .contact-status", "<i></i>" + t.contactStatus, true);
   setText("#contacto .contact-copy", t.contactCopy);
+  setText("#contacto .contact-cta-text", t.contactCta);
   setText("#contacto .footer-line span:last-child", t.footerRole);
 
   languageInputs.forEach((input) => {
@@ -358,7 +361,18 @@ document
   .querySelectorAll(".reveal")
   .forEach((element) => observer.observe(element));
 
-if (typeof particlesJS === "function") {
+function destroyParticles() {
+  if (window.pJSDom && window.pJSDom.length) {
+    window.pJSDom.forEach((dom) => dom.pJS?.fn?.vendors?.destroypJS?.());
+    window.pJSDom = [];
+  }
+  const container = document.getElementById("particles-js");
+  if (container) container.innerHTML = "";
+}
+
+function initParticles(color) {
+  if (typeof particlesJS !== "function") return;
+  destroyParticles();
   particlesJS({
     particles: {
       number: {
@@ -369,7 +383,7 @@ if (typeof particlesJS === "function") {
         },
       },
       color: {
-        value: "#0a0a0a",
+        value: color,
       },
       shape: {
         type: "circle",
@@ -409,7 +423,7 @@ if (typeof particlesJS === "function") {
       line_linked: {
         enable: true,
         distance: 100,
-        color: "#fcf6f6",
+        color: color,
         opacity: 0.4,
         width: 1,
       },
@@ -470,6 +484,32 @@ if (typeof particlesJS === "function") {
     retina_detect: true,
   });
 }
+
+// Modo claro/oscuro: boton animado en el nav, guarda la preferencia y
+// vuelve a pintar las particulas con un color legible en cada tema.
+const THEME_KEY = "portfolio-theme";
+const themeToggle = document.getElementById("themeToggle");
+const storedTheme = localStorage.getItem(THEME_KEY);
+let currentTheme = storedTheme === "dark" ? "dark" : "light";
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  themeToggle?.classList.toggle("is-dark", theme === "dark");
+  themeToggle?.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+  themeToggle?.setAttribute(
+    "aria-label",
+    theme === "dark" ? "Cambiar a modo claro" : "Cambiar a modo oscuro",
+  );
+  initParticles(theme === "dark" ? "#f5f4f0" : "#0a0a0a");
+}
+
+applyTheme(currentTheme);
+
+themeToggle?.addEventListener("click", () => {
+  currentTheme = currentTheme === "dark" ? "light" : "dark";
+  localStorage.setItem(THEME_KEY, currentTheme);
+  applyTheme(currentTheme);
+});
 // Filtro de proyectos: agrega cada nuevo proyecto como .gallery-card con
 // data-category, y un boton .filter-pill con el mismo data-filter para
 // que aparezca al filtrar.

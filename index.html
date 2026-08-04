@@ -122,6 +122,24 @@
             <input id="lang-en" name="language" type="radio" value="en" />
             <label for="lang-en" data-hoverable>EN</label>
           </div>
+          <button
+            class="theme-toggle"
+            type="button"
+            id="themeToggle"
+            aria-label="Cambiar a modo oscuro"
+            aria-pressed="false"
+            data-hoverable
+          >
+            <ion-icon
+              name="sunny-outline"
+              class="theme-toggle-icon theme-toggle-icon--sun"
+            ></ion-icon>
+            <ion-icon
+              name="moon-outline"
+              class="theme-toggle-icon theme-toggle-icon--moon"
+            ></ion-icon>
+            <span class="theme-toggle-thumb" aria-hidden="true"></span>
+          </button>
         </div>
       </nav>
 
@@ -284,7 +302,7 @@
             Estudiante de Ingenieria de Sistemas con base tecnica en
             electronica, soporte tecnico y resolucion de incidencias. Estoy
             construyendo un perfil que une redes, infraestructura TI y
-            desarrollo fullstack.
+            administracion de bases de datos.
           </p>
           <div class="tech-strip" aria-label="Tecnologias principales">
             <span class="tech-item" title="HTML5" data-hoverable
@@ -874,6 +892,7 @@
 
       <footer id="contacto" class="contact-footer reveal">
         <div class="label">05 / Contacto</div>
+        <div class="status contact-status"><i></i>Disponible para nuevas oportunidades</div>
         <h2 class="contact-title">
           Construyamos algo<br />
           <span class="accent-text">con tecnologia.</span>
@@ -882,6 +901,19 @@
           Estoy abierto a seguir aprendiendo, colaborar en proyectos y construir
           soluciones que unan infraestructura, soporte y desarrollo.
         </p>
+        <a
+          class="contact-cta"
+          href="mailto:gerard.2023@icloud.com"
+          data-hoverable
+        >
+          <span class="contact-cta-shine" aria-hidden="true"></span>
+          <ion-icon name="mail-outline"></ion-icon>
+          <span class="contact-cta-text">Escribeme</span>
+          <ion-icon
+            name="arrow-forward-outline"
+            class="contact-cta-arrow"
+          ></ion-icon>
+        </a>
         <div class="footer-socials" aria-label="Redes sociales">
           <a
             href="https://github.com/GerardMichalle"
