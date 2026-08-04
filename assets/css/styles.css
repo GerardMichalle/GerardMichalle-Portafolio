@@ -2083,6 +2083,32 @@ a:active {
   -webkit-line-clamp: 4;
   line-clamp: 4;
   -webkit-box-orient: vertical;
+  transition: max-height 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.gallery-card-body p:not(.gallery-card-subtitle).is-expanded {
+  display: block;
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+}
+
+.gallery-card-desc-toggle {
+  margin-top: -4px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--accent);
+  font: 10px "DM Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+
+.gallery-card-desc-toggle:hover,
+.gallery-card-desc-toggle:focus-visible {
+  opacity: 1;
 }
 
 .gallery-card-link {

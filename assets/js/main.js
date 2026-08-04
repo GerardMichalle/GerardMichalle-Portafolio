@@ -53,6 +53,8 @@ const translations = {
     builtProjectCopy:
       "Sistema desarrollado para llevar un control de usuarios y gestionar pagos de servicios de internet, con un panel administrativo y un panel para clientes.",
     builtProjectLink: "Ver en GitHub",
+    readMore: "Leer más",
+    readLess: "Leer menos",
     willaySubtitle:
       "Sistema Integral de Gestion Escolar — RFID/NFC + Libreta Virtual",
     willayCopy:
@@ -121,6 +123,8 @@ const translations = {
     builtProjectCopy:
       "A user management and internet billing system featuring separate administrative and client dashboards.",
     builtProjectLink: "View on GitHub",
+    readMore: "Read more",
+    readLess: "Read less",
     willaySubtitle:
       "Comprehensive School Management System — RFID/NFC + Virtual Report Card",
     willayCopy:
@@ -663,3 +667,73 @@ document.querySelectorAll("[data-slider]").forEach((slider) => {
     dragStartX = null;
   });
 });
+
+function initGalleryDescriptionToggles() {
+  const t = translations[currentLanguage] || translations.es;
+  const paragraphs = document.querySelectorAll(
+    "#mis-proyectos .gallery-card-body p:not(.gallery-card-subtitle)",
+  );
+
+  paragraphs.forEach((p) => {
+    if (p.scrollHeight - p.clientHeight <= 1) return;
+
+    const toggle = document.createElement("button");
+    toggle.type = "button";
+    toggle.className = "gallery-card-desc-toggle";
+    toggle.textContent = t.readMore;
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("data-hoverable", "");
+
+    let expanded = false;
+    let transitioning = false;
+
+    toggle.addEventListener("click", () => {
+      if (transitioning) return;
+      transitioning = true;
+      expanded = !expanded;
+      toggle.setAttribute("aria-expanded", String(expanded));
+      toggle.textContent = expanded ? t.readLess : t.readMore;
+
+      if (expanded) {
+        p.style.maxHeight = p.clientHeight + "px";
+        p.classList.add("is-expanded");
+        const fullHeight = p.scrollHeight;
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            p.style.maxHeight = fullHeight + "px";
+          });
+        });
+      } else {
+        p.style.maxHeight = p.scrollHeight + "px";
+        void p.offsetHeight;
+        p.classList.remove("is-expanded");
+        const collapsedHeight = p.clientHeight;
+        p.classList.add("is-expanded");
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            p.style.maxHeight = collapsedHeight + "px";
+          });
+        });
+      }
+    });
+
+    p.addEventListener("transitionend", (event) => {
+      if (event.propertyName !== "max-height") return;
+      transitioning = false;
+      if (expanded) {
+        p.style.maxHeight = "none";
+      } else {
+        p.classList.remove("is-expanded");
+        p.style.maxHeight = "";
+      }
+    });
+
+    p.insertAdjacentElement("afterend", toggle);
+  });
+}
+
+if (document.fonts?.ready) {
+  document.fonts.ready.then(initGalleryDescriptionToggles);
+} else {
+  initGalleryDescriptionToggles();
+}
