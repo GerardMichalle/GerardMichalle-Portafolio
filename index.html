@@ -442,8 +442,43 @@
         </p>
       </section>
 
+      <section id="lab-3d" class="reveal">
+        <div class="label">03 / Laboratorio 3D</div>
+        <h2>Un vistazo interactivo</h2>
+        <p class="about-copy">
+          Un objeto 3D renderizado en el navegador con Three.js. Arrastra para
+          rotar, usa la rueda para acercar
+        </p>
+        <div class="lab3d-stage" id="lab3d-stage" role="img" aria-label="Nodo 3D interactivo que representa infraestructura y redes">
+          <p class="lab3d-fallback">
+            Tu navegador no soporta WebGL, asi que esta vista 3D no esta disponible aqui
+          </p>
+          <div class="lab3d-hint"><span>Arrastra para rotar &middot; Scroll para acercar</span></div>
+        </div>
+      </section>
+
+      <section id="horse-3d" class="reveal">
+        <div class="label">04 / Modelo 3D</div>
+        <h2>Otra pieza interactiva.</h2>
+        <p class="about-copy">
+          Un caballo en 3D, cargado y renderizado en vivo con Three.js
+          (GLTFLoader + compresion meshopt).
+        </p>
+        <div class="lab3d-stage gltf-stage" id="horse-3d-stage" role="img" aria-label="Modelo 3D de un caballo negro">
+          <p class="lab3d-fallback">
+            Tu navegador no soporta WebGL, asi que esta vista 3D no esta disponible aqui.
+          </p>
+          <div class="gltf-loader" aria-hidden="true">
+            <span class="gltf-loader-track"><span class="gltf-loader-fill"></span></span>
+            <span class="gltf-loader-pct">0%</span>
+          </div>
+          <div class="lab3d-hint"><span>Arrastra para rotar &middot; Scroll para acercar</span></div>
+        </div>
+        <p class="gltf-credit">Modelo: iRahulRajput (Sketchfab, CC BY)</p>
+      </section>
+
       <section id="stack" class="reveal">
-        <div class="label">03 / Stack y aprendizaje</div>
+        <div class="label">05 / Stack y aprendizaje</div>
         <h2>Areas que estoy fortaleciendo.</h2>
 
         <div class="tech-panel reveal">
@@ -573,12 +608,12 @@
       </section>
 
       <section id="mis-proyectos" class="portfolio-projects reveal">
-        <div class="label">04 / Proyectos</div>
+        <div class="label">06 / Proyectos</div>
         <div class="projects-heading">
-          <h2>Proyectos que he construido.</h2>
+          <h2>Proyectos que he construido</h2>
           <p>
             Una selección de soluciones donde aplico desarrollo, análisis de
-            datos e infraestructura.
+            datos e infraestructura
           </p>
         </div>
 
@@ -635,7 +670,7 @@
         </div>
 
         <div class="projects-gallery">
-          <!-- Proyecto real: edita imagen, descripcion y enlace de GitHub aqui -->
+          <!-- Proyecto real: editare mi imagen, descripcion y enlace de GitHub aqui -->
           <article
             class="gallery-card reveal"
             style="--i: 0"
@@ -764,7 +799,6 @@
             </div>
           </article>
 
-          <!-- Card editable: reemplaza imagen, titulo, descripcion y enlace de GitHub -->
           <article
             class="gallery-card gallery-card--placeholder reveal"
             style="--i: 2"
@@ -795,7 +829,7 @@
             </div>
           </article>
 
-          <!-- Card editable: reemplaza imagen, titulo, descripcion y enlace de GitHub -->
+   
           <article
             class="gallery-card gallery-card--placeholder reveal"
             style="--i: 3"
@@ -826,7 +860,7 @@
             </div>
           </article>
 
-          <!-- Card editable: reemplaza imagen, titulo, descripcion y enlace de GitHub -->
+      
           <article
             class="gallery-card gallery-card--placeholder reveal"
             style="--i: 4"
@@ -857,7 +891,7 @@
             </div>
           </article>
 
-          <!-- Card editable: reemplaza imagen, titulo, descripcion y enlace de GitHub -->
+   
           <article
             class="gallery-card gallery-card--placeholder reveal"
             style="--i: 5"
@@ -891,7 +925,7 @@
       </section>
 
       <footer id="contacto" class="contact-footer reveal">
-        <div class="label">05 / Contacto</div>
+        <div class="label">07 / Contacto</div>
         <div class="status contact-status"><i></i>Disponible para nuevas oportunidades</div>
         <h2 class="contact-title">
           Construyamos algo<br />
@@ -998,6 +1032,18 @@
 
     <script src="assets/js/load.js?v=20260712-ready"></script>
     <script src="assets/js/main.js?v=20260712-ready"></script>
+
+    <!-- Seccion 3D: Three.js cargado por CDN via import map, sin build step -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="assets/js/hero3d.js?v=20260805-1"></script>
+    <script type="module" src="assets/js/gltf-viewer-3d.js?v=20260805-2"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"

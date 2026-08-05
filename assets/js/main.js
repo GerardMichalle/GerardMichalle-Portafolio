@@ -85,7 +85,7 @@ const translations = {
     aboutTitle: "Bridging the gap between hardware and software",
     aboutCopy:
       "I thrive on understanding how systems work under the hood—from hardware, networking, and infrastructure to user-facing applications. <strong>My goal is to grow into a versatile technical role, capable of troubleshooting systems, maintaining infrastructure, and building scalable web solutions.</strong>",
-    stackLabel: "03 / Stack & Learning",
+    stackLabel: "05 / Stack & Learning",
     stackTitle: "Core areas & ongoing learning",
     cap1Tag: "IT Infrastructure",
     cap1Title: "Networking & Telecommunications",
