@@ -41,14 +41,45 @@ const translations = {
     contactTitle: "Construyamos algo<br />",
     contactLink: "con tecnologia",
     builtProjectsLabel: "06 / Proyectos",
-    builtProjectsTitle: "Proyectos que he construido",
-    builtProjectsIntro:
-      "Una selección de soluciones donde aplico desarrollo, análisis de datos e infraestructura.",
     filterAll: "Todos",
     filterFullstack: "Fullstack",
     filterSql: "SQL Server",
     filterPython: "Python",
     filterInfra: "Infraestructura",
+    biLabel: "07 / Analista de Datos BI",
+    biTitle: "Analista de Datos & BI",
+    biIntro:
+      "En paralelo al desarrollo de software, me estoy formando como Analista de Datos / BI: diseno, construccion y despliegue de soluciones de inteligencia de negocio para mejorar el analisis y la visualizacion de datos.",
+    biFilterPowerBi: "Power BI",
+    biFilterSsis: "SSIS",
+    biFilterSsas: "SSAS",
+    biFilterExcel: "Excel",
+    biFilterTableau: "Tableau",
+    biStatusReference: "Referencia de aprendizaje",
+    biStatusPlaceholder: "En proceso de aprendizaje",
+    biDashboardPlaceholder: "Agregare mi dashboard",
+    biLinkPlaceholder: "Agregare mi enlace",
+    biCard1Title: "Dashboard interactivo en Power BI",
+    biCard1Copy:
+      "Diseno y despliegue de reportes y dashboards para el analisis visual de datos, orientados a la toma de decisiones.",
+    biCard2Title: "Modelado y consultas en SQL Server",
+    biCard2Copy:
+      "Aqui describire el objetivo del proyecto, las herramientas usadas y el resultado obtenido.",
+    biCard3Title: "Paquetes ETL con SSIS",
+    biCard3Copy:
+      "Aqui describire el objetivo del proyecto, las herramientas usadas y el resultado obtenido.",
+    biCard4Title: "Modelos analiticos con SSAS",
+    biCard4Copy:
+      "Aqui describire el objetivo del proyecto, las herramientas usadas y el resultado obtenido.",
+    biCard5Title: "Analisis de datos en Excel",
+    biCard5Copy:
+      "Aqui describire el objetivo del proyecto, las herramientas usadas y el resultado obtenido.",
+    biCard6Title: "Dashboards en Tableau",
+    biCard6Copy:
+      "Aqui describire el objetivo del proyecto, las herramientas usadas y el resultado obtenido.",
+    builtProjectsTitle: "Proyectos que he construido",
+    builtProjectsIntro:
+      "Una selección de soluciones donde aplico desarrollo, análisis de datos e infraestructura.",
     builtProjectCopy:
       "Sistema desarrollado para llevar un control de usuarios y gestionar pagos de servicios de internet, con un panel administrativo y un panel para clientes.",
     builtProjectLink: "Ver en GitHub",
@@ -61,10 +92,10 @@ const translations = {
     willayStatus: "En proceso",
     placeholderTitle: "Nombre del proyecto",
     placeholderCopy:
-      "Describe aqui el objetivo del proyecto, las tecnologias usadas y el resultado obtenido.",
-    placeholderLink: "Enlace a GitHub",
-    placeholderImage: "Agrega tu imagen",
-    contactLabel: "07 / Contacto",
+      "Aqui describire el objetivo del proyecto, las tecnologias usadas y el resultado obtenido.",
+    placeholderLink: "Agregare mi enlace",
+    placeholderImage: "Agregare mi imagen",
+    contactLabel: "08 / Contacto",
     contactStatus: "Disponible para nuevas oportunidades",
     contactCta: "Escribeme",
     contactCopy:
@@ -111,14 +142,45 @@ const translations = {
     factDegreeLabel: "Degree",
     factDegreeValue: "Computer Systems Engineering — UPN",
     builtProjectsLabel: "06 / Projects",
-    builtProjectsTitle: "Featured Projects",
-    builtProjectsIntro:
-      "A curated selection of solutions applying development, data analysis, and infrastructure.",
     filterAll: "All",
     filterFullstack: "Fullstack",
     filterSql: "SQL Server",
     filterPython: "Python",
     filterInfra: "Infrastructure",
+    biLabel: "07 / BI Data Analyst",
+    biTitle: "Data Analyst & BI",
+    biIntro:
+      "Alongside software development, I'm training as a BI / Data Analyst: designing, building, and deploying business intelligence solutions to improve data analysis and visualization.",
+    biFilterPowerBi: "Power BI",
+    biFilterSsis: "SSIS",
+    biFilterSsas: "SSAS",
+    biFilterExcel: "Excel",
+    biFilterTableau: "Tableau",
+    biStatusReference: "Learning reference",
+    biStatusPlaceholder: "Learning in progress",
+    biDashboardPlaceholder: "I'll add my dashboard",
+    biLinkPlaceholder: "I'll add my link",
+    biCard1Title: "Interactive Power BI dashboard",
+    biCard1Copy:
+      "Designing and deploying reports and dashboards for visual data analysis, geared toward decision-making.",
+    biCard2Title: "SQL Server modeling & queries",
+    biCard2Copy:
+      "I'll describe the project's goal, tools used, and the outcome here.",
+    biCard3Title: "ETL packages with SSIS",
+    biCard3Copy:
+      "I'll describe the project's goal, tools used, and the outcome here.",
+    biCard4Title: "Analytical models with SSAS",
+    biCard4Copy:
+      "I'll describe the project's goal, tools used, and the outcome here.",
+    biCard5Title: "Data analysis in Excel",
+    biCard5Copy:
+      "I'll describe the project's goal, tools used, and the outcome here.",
+    biCard6Title: "Tableau dashboards",
+    biCard6Copy:
+      "I'll describe the project's goal, tools used, and the outcome here.",
+    builtProjectsTitle: "Featured Projects",
+    builtProjectsIntro:
+      "A curated selection of solutions applying development, data analysis, and infrastructure.",
     builtProjectCopy:
       "A user management and internet billing system featuring separate administrative and client dashboards.",
     builtProjectLink: "View on GitHub",
@@ -134,7 +196,7 @@ const translations = {
       "Describe the project's goal, technologies used, and the outcome here.",
     placeholderLink: "GitHub link",
     placeholderImage: "Add your image",
-    contactLabel: "07 / Contact",
+    contactLabel: "08 / Contact",
     contactTitle: "Let's build something<br />",
     contactLink: "impactful together.",
     contactStatus: "Open to new opportunities",
@@ -206,15 +268,18 @@ function applyLanguage(language) {
   setText("#mis-proyectos .label", t.builtProjectsLabel);
   setText("#mis-proyectos h2", t.builtProjectsTitle);
   setText("#mis-proyectos .projects-heading p", t.builtProjectsIntro);
-  setText('.filter-pill[data-filter="todos"]', t.filterAll);
-  setText('.filter-pill[data-filter="fullstack"]', t.filterFullstack);
-  setText('.filter-pill[data-filter="sql-server"]', t.filterSql);
-  setText('.filter-pill[data-filter="python"]', t.filterPython);
-  setText('.filter-pill[data-filter="infraestructura"]', t.filterInfra);
+  setText('#mis-proyectos .filter-pill[data-filter="fullstack"]', t.filterFullstack);
+  setText('#mis-proyectos .filter-pill[data-filter="sql-server"]', t.filterSql);
+  setText('#mis-proyectos .filter-pill[data-filter="python"]', t.filterPython);
+  setText('#mis-proyectos .filter-pill[data-filter="infraestructura"]', t.filterInfra);
   setText("#mis-proyectos .gallery-card:nth-child(1) p", t.builtProjectCopy);
   setText(
     "#mis-proyectos .gallery-card:nth-child(1) .gallery-card-link-text",
     t.builtProjectLink,
+  );
+  setText(
+    '#mis-proyectos .gallery-card[data-category="infraestructura"] .gallery-card-tag',
+    t.filterInfra,
   );
   document
     .querySelectorAll("#mis-proyectos .gallery-card--placeholder")
@@ -224,21 +289,41 @@ function applyLanguage(language) {
       const linkText = card.querySelector(".gallery-card-link-text");
       const imageLabel = card.querySelector(".gallery-card-image--empty span");
       if (h3) h3.textContent = t.placeholderTitle;
-      if (p) p.textContent = t.placeholderCopy;
       if (linkText) linkText.textContent = t.placeholderLink;
       if (imageLabel) imageLabel.textContent = t.placeholderImage;
-    });
-  document
-    .querySelectorAll(
-      '#mis-proyectos .gallery-card[data-category="infraestructura"] .gallery-card-tag',
-    )
-    .forEach((tag) => {
-      tag.textContent = t.filterInfra;
+      if (p) p.textContent = t.placeholderCopy;
     });
   setText('#mis-proyectos [data-project="willay"] .gallery-card-subtitle', t.willaySubtitle);
   setText('#mis-proyectos [data-project="willay"] .gallery-card-body > p:not(.gallery-card-subtitle)', t.willayCopy);
   setText('#mis-proyectos [data-project="willay"] .gallery-card-status', t.willayStatus);
   setText('#mis-proyectos [data-project="willay"] .gallery-card-link-text', t.builtProjectLink);
+  setText("#analista-bi .label", t.biLabel);
+  setText("#analista-bi h2", t.biTitle);
+  setText("#analista-bi .projects-heading p", t.biIntro);
+  setText('#analista-bi .filter-pill[data-filter="power-bi"]', t.biFilterPowerBi);
+  setText('#analista-bi .filter-pill[data-filter="sql-server"]', t.filterSql);
+  setText('#analista-bi .filter-pill[data-filter="ssis"]', t.biFilterSsis);
+  setText('#analista-bi .filter-pill[data-filter="ssas"]', t.biFilterSsas);
+  setText('#analista-bi .filter-pill[data-filter="excel"]', t.biFilterExcel);
+  setText('#analista-bi .filter-pill[data-filter="tableau"]', t.biFilterTableau);
+  setText("#analista-bi .gallery-card:nth-child(1) .gallery-card-status", t.biStatusReference);
+  setText("#analista-bi .gallery-card:nth-child(1) h3", t.biCard1Title);
+  setText("#analista-bi .gallery-card:nth-child(1) .gallery-card-body p", t.biCard1Copy);
+  document
+    .querySelectorAll("#analista-bi .gallery-card--placeholder")
+    .forEach((card, i) => {
+      const n = i + 2;
+      const h3 = card.querySelector("h3");
+      const p = card.querySelector(".gallery-card-body p");
+      const status = card.querySelector(".gallery-card-status");
+      const imageLabel = card.querySelector(".gallery-card-image--empty > span:not(.gallery-card-status)");
+      const linkText = card.querySelector(".gallery-card-link-text");
+      if (h3) h3.textContent = t[`biCard${n}Title`];
+      if (p) p.textContent = t[`biCard${n}Copy`];
+      if (status) status.textContent = t.biStatusPlaceholder;
+      if (imageLabel) imageLabel.textContent = t.biDashboardPlaceholder;
+      if (linkText) linkText.textContent = t.biLinkPlaceholder;
+    });
   setText("#contacto .label", t.contactLabel);
   setText("#contacto .contact-status", "<i></i>" + t.contactStatus, true);
   setText("#contacto .contact-copy", t.contactCopy);
@@ -512,36 +597,50 @@ themeToggle?.addEventListener("click", () => {
   applyTheme(currentTheme);
 });
 
-const projectsGallery = document.querySelector(".projects-gallery");
-const filterPills = document.querySelectorAll(".filter-pill");
+document.querySelectorAll(".projects-filter").forEach((filterGroup) => {
+  const gallery = filterGroup.nextElementSibling;
+  if (!gallery || !gallery.classList.contains("projects-gallery")) return;
 
-if (projectsGallery && filterPills.length) {
-  const cards = [...projectsGallery.querySelectorAll(".gallery-card")];
+  const pills = [...filterGroup.querySelectorAll(".filter-pill")];
+  const cards = [...gallery.querySelectorAll(".gallery-card")];
 
-  filterPills.forEach((pill) => {
+  pills.forEach((pill) => {
     pill.addEventListener("click", () => {
-      const filter = pill.dataset.filter;
+      const alreadyActive = pill.classList.contains("is-active");
 
-      filterPills.forEach((otherPill) => {
-        const isActive = otherPill === pill;
-        otherPill.classList.toggle("is-active", isActive);
-        otherPill.setAttribute("aria-pressed", isActive ? "true" : "false");
+      pills.forEach((otherPill) => {
+        otherPill.classList.remove("is-active");
+        otherPill.setAttribute("aria-pressed", "false");
       });
 
+      if (alreadyActive) {
+        cards.forEach((card) => {
+          card.classList.toggle("is-hidden", card.classList.contains("gallery-card--placeholder"));
+        });
+        return;
+      }
+
+      pill.classList.add("is-active");
+      pill.setAttribute("aria-pressed", "true");
+
       cards.forEach((card) => {
-        const matches = filter === "todos" || card.dataset.category === filter;
-        card.classList.toggle("is-hidden", !matches);
+        card.classList.toggle("is-hidden", card.dataset.category !== pill.dataset.filter);
       });
     });
   });
-}
-
+});
 
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = lightbox?.querySelector(".lightbox-image");
 const lightboxCounter = lightbox?.querySelector(".lightbox-counter");
 const lightboxPrev = lightbox?.querySelector(".lightbox-prev");
 const lightboxNext = lightbox?.querySelector(".lightbox-next");
+const lightboxInfoTag = lightbox?.querySelector(".lightbox-info-tag");
+const lightboxInfoTitle = lightbox?.querySelector(".lightbox-info-title");
+const lightboxInfoSubtitle = lightbox?.querySelector(".lightbox-info-subtitle");
+const lightboxInfoCopy = lightbox?.querySelector(".lightbox-info-copy");
+const lightboxInfoLink = lightbox?.querySelector(".lightbox-info-link");
+const lightboxInfoLinkText = lightbox?.querySelector(".lightbox-info-link-text");
 let lightboxImages = [];
 let lightboxIndex = 0;
 
@@ -560,11 +659,38 @@ function renderLightbox() {
   }
 }
 
-function openLightbox(images, startIndex = 0) {
+function getLightboxInfo(card) {
+  if (!card) return null;
+  return {
+    tag: card.querySelector(".gallery-card-tag")?.textContent || "",
+    title: card.querySelector(".gallery-card-body h3")?.innerHTML || "",
+    subtitle: card.querySelector(".gallery-card-subtitle")?.textContent || "",
+    copy:
+      card.querySelector(".gallery-card-body p:not(.gallery-card-subtitle)")
+        ?.textContent || "",
+    linkHref: card.querySelector(".gallery-card-link")?.getAttribute("href") || "",
+    linkText:
+      card.querySelector(".gallery-card-link-text")?.textContent || "",
+  };
+}
+
+function openLightbox(images, startIndex = 0, info = null) {
   if (!lightbox || !images.length) return;
   lightboxImages = images;
   lightboxIndex = startIndex;
   renderLightbox();
+
+  if (lightboxInfoTag) lightboxInfoTag.textContent = info?.tag || "";
+  if (lightboxInfoTitle) lightboxInfoTitle.innerHTML = info?.title || "";
+  if (lightboxInfoSubtitle) lightboxInfoSubtitle.textContent = info?.subtitle || "";
+  if (lightboxInfoCopy) lightboxInfoCopy.textContent = info?.copy || "";
+  if (lightboxInfoLink) {
+    const hasLink = Boolean(info?.linkHref && info.linkHref !== "#");
+    lightboxInfoLink.classList.toggle("is-hidden", !hasLink);
+    if (hasLink) lightboxInfoLink.setAttribute("href", info.linkHref);
+  }
+  if (lightboxInfoLinkText) lightboxInfoLinkText.textContent = info?.linkText || "";
+
   lightbox.classList.add("is-open");
   lightbox.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
@@ -605,7 +731,11 @@ document
     const img = container.querySelector("img");
     if (!img) return;
     container.addEventListener("click", () => {
-      openLightbox([{ src: img.src, alt: img.alt }], 0);
+      openLightbox(
+        [{ src: img.src, alt: img.alt }],
+        0,
+        getLightboxInfo(container.closest(".gallery-card")),
+      );
     });
   });
 
@@ -656,6 +786,7 @@ document.querySelectorAll("[data-slider]").forEach((slider) => {
       openLightbox(
         slides.map((slide) => ({ src: slide.src, alt: slide.alt })),
         index,
+        getLightboxInfo(slider.closest(".gallery-card")),
       );
       return;
     }

@@ -1742,22 +1742,23 @@ a:active {
   padding-top: clamp(76px, 9vw, 112px);
 }
 .projects-heading {
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(230px, 0.8fr);
-  gap: 36px;
-  align-items: end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
   margin-bottom: 30px;
+  text-align: center;
 }
 .projects-heading h2 {
-  max-width: 520px;
-  margin: 0;
+  max-width: 620px;
+  margin: 0 auto;
   font-size: clamp(34px, 5vw, 52px);
   line-height: 1.02;
   letter-spacing: -0.045em;
 }
 .projects-heading p {
-  max-width: 310px;
-  margin: 0 0 4px;
+  max-width: 480px;
+  margin: 0 auto;
   color: var(--muted);
   font-size: 12px;
   line-height: 1.65;
@@ -3232,10 +3233,13 @@ a.fact-value:hover {
 .lightbox-content {
   position: relative;
   z-index: 1;
-  width: min(92vw, 1100px);
-  max-height: 86vh;
-  display: grid;
-  place-items: center;
+  width: min(92vw, 900px);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+  overflow-y: auto;
   transform: scale(0.96);
   transition: transform 0.3s ease;
 }
@@ -3244,14 +3248,100 @@ a.fact-value:hover {
   transform: scale(1);
 }
 
+.lightbox-media {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
 .lightbox-image {
   display: block;
   width: auto;
   height: auto;
   max-width: 100%;
-  max-height: 86vh;
+  max-height: 56vh;
   border-radius: 8px;
   box-shadow: 0 30px 90px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-info {
+  width: min(100%, 560px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.lightbox-info-tag {
+  color: rgba(255, 255, 255, 0.7);
+  font:
+    10px "DM Mono",
+    monospace;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.lightbox-info-title {
+  margin: 0;
+  font-size: clamp(22px, 3.4vw, 28px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.lightbox-info-title #red {
+  color: #ff8a73;
+}
+
+.lightbox-info-subtitle {
+  margin: -4px 0 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  font-style: italic;
+}
+
+.lightbox-info-subtitle:empty,
+.lightbox-info-copy:empty {
+  display: none;
+}
+
+.lightbox-info-copy {
+  margin: 0;
+  max-width: 52ch;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13.5px;
+  line-height: 1.65;
+}
+
+.lightbox-info-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  padding: 10px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  color: #fff;
+  font:
+    11px "DM Mono",
+    monospace;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.lightbox-info-link:hover {
+  background: #fff;
+  color: #0a0a0a;
+}
+
+.lightbox-info-link.is-hidden {
+  display: none;
 }
 
 .lightbox-close {
@@ -3321,10 +3411,14 @@ a.fact-value:hover {
 .lightbox-counter {
   position: absolute;
   z-index: 2;
-  bottom: -34px;
+  bottom: 12px;
   left: 50%;
   transform: translateX(-50%);
-  color: rgba(255, 255, 255, 0.75);
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(16, 16, 16, 0.55);
+  backdrop-filter: blur(6px);
+  color: rgba(255, 255, 255, 0.85);
   font:
     10px "DM Mono",
     monospace;
@@ -3333,15 +3427,17 @@ a.fact-value:hover {
 
 @media (max-width: 640px) {
   .lightbox {
-    padding: 20px;
+    padding: 16px;
   }
 
   .lightbox-content {
     width: 100%;
+    max-height: 92vh;
+    gap: 18px;
   }
 
   .lightbox-close {
-    top: -42px;
+    top: -40px;
     right: 0;
   }
 
@@ -3351,6 +3447,18 @@ a.fact-value:hover {
 
   .lightbox-next {
     right: 4px;
+  }
+
+  .lightbox-image {
+    max-height: 42vh;
+  }
+
+  .lightbox-info-title {
+    font-size: clamp(20px, 6vw, 24px);
+  }
+
+  .lightbox-info-copy {
+    font-size: 13px;
   }
 }
 
