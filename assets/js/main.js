@@ -12,7 +12,7 @@ const translations = {
     aboutTitle: "Tecnologia desde el hardware hasta el software",
     aboutCopy:
       "Me interesa entender como funcionan los sistemas por dentro: equipos, redes, infraestructura y tambien las aplicaciones que usan las personas. <strong>Mi objetivo es crecer como perfil tecnico capaz de resolver incidencias, mantener sistemas y construir soluciones web utiles.</strong>",
-    stackLabel: "03 / Stack y aprendizaje",
+    stackLabel: "05 / Stack y aprendizaje",
     stackTitle: "Areas que estoy fortaleciendo",
     cap1Tag: "Infraestructura TI",
     cap1Title: "Redes y telecomunicaciones",
@@ -38,10 +38,9 @@ const translations = {
     factLocationValue: "Peru",
     factDegreeLabel: "Formacion",
     factDegreeValue: "Ingenieria de Sistemas Computacionales — UPN",
-    contactLabel: "04 / Contacto",
     contactTitle: "Construyamos algo<br />",
     contactLink: "con tecnologia",
-    builtProjectsLabel: "04 / Proyectos",
+    builtProjectsLabel: "06 / Proyectos",
     builtProjectsTitle: "Proyectos que he construido",
     builtProjectsIntro:
       "Una selección de soluciones donde aplico desarrollo, análisis de datos e infraestructura.",
@@ -65,7 +64,7 @@ const translations = {
       "Describe aqui el objetivo del proyecto, las tecnologias usadas y el resultado obtenido.",
     placeholderLink: "Enlace a GitHub",
     placeholderImage: "Agrega tu imagen",
-    contactLabel: "05 / Contacto",
+    contactLabel: "07 / Contacto",
     contactStatus: "Disponible para nuevas oportunidades",
     contactCta: "Escribeme",
     contactCopy:
@@ -111,7 +110,7 @@ const translations = {
     factLocationValue: "Peru",
     factDegreeLabel: "Degree",
     factDegreeValue: "Computer Systems Engineering — UPN",
-    builtProjectsLabel: "04 / Projects",
+    builtProjectsLabel: "06 / Projects",
     builtProjectsTitle: "Featured Projects",
     builtProjectsIntro:
       "A curated selection of solutions applying development, data analysis, and infrastructure.",
@@ -135,7 +134,7 @@ const translations = {
       "Describe the project's goal, technologies used, and the outcome here.",
     placeholderLink: "GitHub link",
     placeholderImage: "Add your image",
-    contactLabel: "05 / Contact",
+    contactLabel: "07 / Contact",
     contactTitle: "Let's build something<br />",
     contactLink: "impactful together.",
     contactStatus: "Open to new opportunities",
